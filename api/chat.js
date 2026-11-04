@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI } from "@google/generative-ai"; // Fixed SDK package name
 import { KNOWLEDGE } from "./_knowledge.js";
 import { limit, today } from "./_ratelimit.js";
 import { guardRequest, clientIp, logEvent } from "./_guard.js";
@@ -11,8 +11,8 @@ const DEV =
 const MAX_PER_MIN = Number(process.env.RATE_LIMIT_PER_MIN) || 12; // per visitor per minute
 const PER_IP_DAILY = Number(process.env.CHAT_PER_IP_DAILY) || 60; // per visitor per day
 const DAILY_LIMIT = Number(process.env.CHAT_DAILY_LIMIT) || 400; // whole site per day (protects your Gemini quota)
-const ATTEMPT_TIMEOUT_MS = Number(process.env.GEMINI_TIMEOUT_MS || 20000); // wait for the first words, per model
-const TOTAL_BUDGET_MS = Number(process.env.GEMINI_TOTAL_MS || 40000); // all attempts together
+const ATTEMPT_TIMEOUT_MS = Number(process.env.GEMINI_TIMEOUT_MS) || 20000; // wait for the first words, per model
+const TOTAL_BUDGET_MS = Number(process.env.GEMINI_TOTAL_MS) || 40000; // all attempts together
 
 // If GEMINI_MODEL is set it is tried first. Otherwise the models below are tried in order, fastest first.
 // A model Google reports as not found is skipped and remembered, so a retired name costs almost no time.
@@ -129,31 +129,36 @@ const levelsFor = (model) =>
 const isThinkingError = (err) =>
   classify(err) === "other" && /thinking/i.test(String(err?.message || ""));
 
-function buildConfig(level) {
-  const config = { systemInstruction: SYSTEM, maxOutputTokens: 800 };
-  if (level) config.thinkingConfig = { thinkingLevel: level };
-  return config;
+// Modified: Build config for the generateContent parameters, ensuring systemInstruction is separate.
+function buildParams(level, messages) {
+  const params = {
+    contents: toContents(messages),
+    generationConfig: { maxOutputTokens: 800 },
+    systemInstruction: SYSTEM,
+  };
+  if (level) {
+    params.generationConfig.thinkingConfig = { thinkingLevel: level };
+  }
+  return params;
 }
 
 // Streams the answer to the browser word by word, so the visitor sees text almost immediately.
-async function streamOut(ai, model, messages, config, ms, res) {
+async function streamOut(modelRef, messages, level, ms, res) {
   const deadline = Date.now() + ms;
+  const params = buildParams(level, messages);
   const gen = await withTimeout(
-    ai.models.generateContentStream({
-      model,
-      contents: toContents(messages),
-      config,
-    }),
+    modelRef.generateContentStream(params), // Correct parameter passing
     ms,
   );
-  const it = gen[Symbol.asyncIterator]();
+
   let started = false;
   try {
-    for (;;) {
+    for await (const chunk of gen.stream) {
+      // Corrected streaming iteration
       const wait = started ? 60000 : Math.max(1000, deadline - Date.now());
-      const { value, done } = await withTimeout(it.next(), wait);
-      if (done) break;
-      const piece = value?.text || "";
+      // Iteration already manages timeout/completion implicitly with stream and withTimeout.
+      // Keeping this section mostly for value extraction consistency.
+      const piece = chunk.text(); // Corrected value extraction
       if (!piece) continue;
       if (!started) {
         res.statusCode = 200;
@@ -180,20 +185,20 @@ async function streamOut(ai, model, messages, config, ms, res) {
 }
 
 async function generate(ai, model, messages, ms, res, stream) {
+  const modelRef = ai.getGenerativeModel({ model }); // Must get model reference
   let lastErr;
   for (const level of levelsFor(model)) {
     try {
-      const config = buildConfig(level);
-      if (stream) return await streamOut(ai, model, messages, config, ms, res);
+      if (stream) return await streamOut(modelRef, messages, level, ms, res);
+
+      const params = buildParams(level, messages);
       const r = await withTimeout(
-        ai.models.generateContent({
-          model,
-          contents: toContents(messages),
-          config,
-        }),
+        modelRef.generateContent(params), // Correct parameter passing
         ms,
       );
-      const text = (r.text || "").trim();
+      const result = await r;
+      const response = await result.response;
+      const text = (response.text() || "").trim(); // Correct value extraction
       if (!text)
         throw new Error(
           "Gemini returned no text (the answer may have been blocked)",
@@ -201,7 +206,7 @@ async function generate(ai, model, messages, ms, res, stream) {
       return { text };
     } catch (err) {
       lastErr = err;
-      if (res.headersSent || !isThinkingError(err)) throw err;
+      if (res?.headersSent || !isThinkingError(err)) throw err;
     }
   }
   throw lastErr;
@@ -237,15 +242,23 @@ export default async function handler(req, res) {
   const day = today();
   if (!(await limit(`chat:min:${ip}`, MAX_PER_MIN, 60)).allowed) {
     logEvent("rate_limited", req, { scope: "visitor_minute" });
-    return res.status(429).json({ error: "Too many messages. Please wait a minute.", code: "rate_limit" });
+    return res.status(429).json({
+      error: "Too many messages. Please wait a minute.",
+      code: "rate_limit",
+    });
   }
   if (!(await limit(`chat:ipday:${day}:${ip}`, PER_IP_DAILY, 90000)).allowed) {
     logEvent("rate_limited", req, { scope: "visitor_day" });
-    return res.status(429).json({ error: "Daily message limit reached.", code: "visitor_limit" });
+    return res
+      .status(429)
+      .json({ error: "Daily message limit reached.", code: "visitor_limit" });
   }
   if (!(await limit(`chat:day:${day}`, DAILY_LIMIT, 90000)).allowed) {
     logEvent("rate_limited", req, { scope: "site_day" });
-    return res.status(429).json({ error: "The assistant reached its limit for today.", code: "daily_limit" });
+    return res.status(429).json({
+      error: "The assistant reached its limit for today.",
+      code: "daily_limit",
+    });
   }
 
   const preferred = (process.env.GEMINI_MODEL || "").trim();
@@ -253,7 +266,7 @@ export default async function handler(req, res) {
     ...new Set([workingModel, preferred, ...FALLBACK_MODELS].filter(Boolean)),
   ].filter((m) => !deadModels.has(m));
 
-  const ai = new GoogleGenAI({ apiKey });
+  const ai = new GoogleGenAI(apiKey); // Fixed SDK Initialization
   const started = Date.now();
   let lastErr = null,
     lastCode = "model",

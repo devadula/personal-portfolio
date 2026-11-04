@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+dev-server.js
+README.md
+scripts
+tests
+.github
+node_modules

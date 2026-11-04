@@ -1,0 +1,18 @@
+# Runs on every push and pull request. It checks and tests only; it never deploys.
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check        # syntax of all files + secret scan
+      - run: npm test             # security and behaviour tests
+      - run: npm audit --audit-level=high   # known vulnerabilities in dependencies

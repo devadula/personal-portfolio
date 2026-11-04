@@ -1,0 +1,1551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>
+      Durgajanesh Devadula – Web Developer | AI & ML Student | Open to Freelance
+      Projects
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Durgajanesh Devadula, a web developer and B.Tech AI & ML student available for freelance and project-based work."
+    />
+    <meta name="theme-color" content="#04070f" />
+    <meta name="author" content="Durgajanesh Devadula" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Durgajanesh Devadula" />
+    <meta property="og:title" content="Durgajanesh Devadula – Web Developer | AI & ML Student" />
+    <meta property="og:description" content="Web developer and B.Tech AI & ML student available for freelance and project-based work." />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Durgajanesh Devadula – Web Developer | AI & ML Student" />
+    <meta name="twitter:description" content="Web developer and B.Tech AI & ML student available for freelance and project-based work." />
+    <!-- SEO-URL-START (filled by: npm run set-url -- https://your-live-address) -->
+    <!-- SEO-URL-END -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Durgajanesh Devadula",
+        "jobTitle": "Web Developer and AI & ML Student",
+        "email": "mailto:janeshdevadula8@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Visakhapatnam",
+          "addressRegion": "Andhra Pradesh",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "Bootstrap", "C#", ".NET", "SQL"],
+        "sameAs": [
+          "https://github.com/devadula/janesh",
+          "https://www.linkedin.com/in/janesh-devadula-b9b70a42a"
+        ]
+      }
+    </script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2304070f%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%2338d0ff%27%3EDD%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    />
+    <style>
+      :root {
+        --bg: #04070f;
+        --bg2: #0a1224;
+        --card: rgba(20, 34, 66, 0.55);
+        --line: rgba(80, 140, 255, 0.22);
+        --blue: #2f7bff;
+        --cyan: #38d0ff;
+        --tx: #f2f6ff;
+        --mu: #a3b1cc;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+        }
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px));
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--tx);
+        font:
+          400 1rem/1.65 Inter,
+          system-ui,
+          sans-serif;
+        overflow-x: hidden;
+        background-image:
+          linear-gradient(var(--line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line) 1px, transparent 1px);
+        background-size: 56px 56px;
+        background-attachment: fixed;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(
+            60% 50% at 80% 0,
+            rgba(47, 123, 255, 0.28),
+            transparent 70%
+          ),
+          radial-gradient(
+            50% 40% at 0 100%,
+            rgba(56, 208, 255, 0.14),
+            transparent 70%
+          ),
+          linear-gradient(var(--bg) 0, rgba(4, 7, 15, 0.82) 100%);
+        z-index: -1;
+        pointer-events: none;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Space Grotesk", Inter, sans-serif;
+        line-height: 1.12;
+        margin: 0 0 0.6rem;
+      }
+      h1 {
+        font-size: clamp(2.3rem, 7vw, 4.6rem);
+        letter-spacing: -0.03em;
+      }
+      h2 {
+        font-size: clamp(1.7rem, 4vw, 2.5rem);
+        letter-spacing: -0.02em;
+        margin-bottom: 1.4rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+      p {
+        margin: 0 0 1rem;
+        color: var(--mu);
+        max-width: 68ch;
+      }
+      a {
+        color: var(--cyan);
+      }
+      :focus-visible {
+        outline: 3px solid var(--cyan);
+        outline-offset: 3px;
+        border-radius: 6px;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+      section {
+        padding: 5rem 0;
+      }
+      .skip {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        background: var(--blue);
+        color: #fff;
+        padding: 0.6rem 1rem;
+        z-index: 99;
+      }
+      .skip:focus {
+        left: 0;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding-top: env(safe-area-inset-top, 0px);
+        background: rgba(4, 7, 15, 0.78);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+        gap: 1rem;
+      }
+      .brand {
+        font:
+          700 1.3rem "Space Grotesk",
+          sans-serif;
+        color: var(--tx);
+        text-decoration: none;
+        letter-spacing: -0.02em;
+      }
+      .brand span {
+        color: var(--cyan);
+      }
+      .links {
+        display: flex;
+        gap: 1.3rem;
+        align-items: center;
+      }
+      .links a {
+        color: var(--mu);
+        text-decoration: none;
+        font-size: 0.93rem;
+        font-weight: 500;
+      }
+      .links a:hover {
+        color: var(--tx);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.35rem;
+        border-radius: 10px;
+        font:
+          600 0.95rem Inter,
+          sans-serif;
+        text-decoration: none;
+        border: 1px solid var(--blue);
+        cursor: pointer;
+        transition:
+          transform 0.15s,
+          box-shadow 0.2s,
+          background 0.2s;
+        color: var(--tx);
+        background: transparent;
+        min-height: 44px;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn.p {
+        background: linear-gradient(135deg, #2563eb, #1a56d6);
+        box-shadow: 0 8px 28px rgba(47, 123, 255, 0.35);
+      }
+      .links .btn {
+        padding: 0.55rem 1rem;
+        min-height: 40px;
+      }
+      .links .btn.p {
+        color: #fff;
+      }
+      .menu {
+        display: none;
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--tx);
+        border-radius: 8px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+      @media (max-width: 860px) {
+        .menu {
+          display: block;
+        }
+        .links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: stretch;
+          background: var(--bg2);
+          padding: 1rem 1.25rem 1.4rem;
+          border-bottom: 1px solid var(--line);
+        }
+        .links.open {
+          display: flex;
+        }
+        .links a {
+          padding: 0.5rem 0;
+        }
+      }
+      .hero {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        padding: 7rem 0 4rem;
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 2rem;
+        align-items: center;
+      }
+      @media (max-width: 860px) {
+        .hero .wrap {
+          grid-template-columns: 1fr;
+        }
+        .scene {
+          order: -1;
+          height: 190px !important;
+        }
+      }
+      .status {
+        display: inline-flex;
+        gap: 0.6rem;
+        align-items: center;
+        border: 1px solid var(--line);
+        background: var(--card);
+        padding: 0.4rem 0.9rem;
+        border-radius: 99px;
+        font-size: 0.88rem;
+        margin-bottom: 1.3rem;
+      }
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #3ddc97;
+        box-shadow: 0 0 0 0 rgba(61, 220, 151, 0.6);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        70% {
+          box-shadow: 0 0 0 9px rgba(61, 220, 151, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(61, 220, 151, 0);
+        }
+      }
+      .role {
+        font: 500 clamp(1.05rem, 2.4vw, 1.4rem) "Space Grotesk";
+        color: var(--cyan);
+        margin-bottom: 1rem;
+      }
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 1.6rem;
+      }
+      .scene {
+        height: 340px;
+        perspective: 900px;
+        display: grid;
+        place-items: center;
+      }
+      .cube {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: spin 18s linear infinite;
+      }
+      .cube i {
+        position: absolute;
+        inset: 0;
+        border: 1.5px solid var(--cyan);
+        background: rgba(47, 123, 255, 0.1);
+        box-shadow:
+          inset 0 0 30px rgba(47, 123, 255, 0.35),
+          0 0 18px rgba(56, 208, 255, 0.25);
+        display: grid;
+        place-items: center;
+        font: 700 1.1rem "Space Grotesk";
+        color: var(--cyan);
+      }
+      .cube i:nth-child(1) {
+        transform: translateZ(75px);
+      }
+      .cube i:nth-child(2) {
+        transform: rotateY(180deg) translateZ(75px);
+      }
+      .cube i:nth-child(3) {
+        transform: rotateY(90deg) translateZ(75px);
+      }
+      .cube i:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(75px);
+      }
+      .cube i:nth-child(5) {
+        transform: rotateX(90deg) translateZ(75px);
+      }
+      .cube i:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(75px);
+      }
+      @keyframes spin {
+        to {
+          transform: rotateX(-20deg) rotateY(360deg);
+        }
+      }
+      .cube {
+        transform: rotateX(-20deg) rotateY(30deg);
+      }
+      .grid {
+        display: grid;
+        gap: 1.1rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 1.4rem;
+        backdrop-filter: blur(8px);
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .card:hover {
+        border-color: var(--cyan);
+        transform: translateY(-3px);
+      }
+      .card p {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-top: 0.5rem;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        background: rgba(47, 123, 255, 0.12);
+        color: var(--tx);
+        padding: 0.25rem 0.7rem;
+        border-radius: 99px;
+        font-size: 0.85rem;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        background: rgba(61, 220, 151, 0.14);
+        color: #7ff0bd;
+        margin-bottom: 0.7rem;
+      }
+      .tag.done {
+        background: rgba(56, 208, 255, 0.14);
+        color: var(--cyan);
+      }
+      .art {
+        height: 150px;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        border: 1px solid var(--line);
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(47, 123, 255, 0.3), rgba(4, 7, 15, 0.5)),
+          repeating-linear-gradient(
+            45deg,
+            transparent 0 12px,
+            rgba(56, 208, 255, 0.07) 12px 13px
+          );
+      }
+      .art svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .chat-fab {
+        position: fixed;
+        right: 1rem;
+        bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+        z-index: 60;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        border-radius: 50%;
+        border: 1px solid var(--cyan);
+        background: linear-gradient(135deg, #2563eb, #1a56d6);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        box-shadow: 0 8px 28px rgba(47, 123, 255, 0.5);
+        transition:
+          transform 0.15s,
+          box-shadow 0.2s;
+      }
+      .chat-fab:hover {
+        transform: scale(1.07);
+        box-shadow: 0 10px 34px rgba(56, 208, 255, 0.55);
+      }
+      .chat-fab svg {
+        width: 28px;
+        height: 28px;
+        display: block;
+      }
+      .chat-fab .i-x {
+        display: none;
+      }
+      .chat-fab[aria-expanded="true"] .i-chat {
+        display: none;
+      }
+      .chat-fab[aria-expanded="true"] .i-x {
+        display: block;
+      }
+      .chat-fab::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 2px solid var(--cyan);
+        opacity: 0;
+        animation: fabping 2.6s ease-out infinite;
+        pointer-events: none;
+      }
+      .chat-fab[aria-expanded="true"]::after {
+        display: none;
+      }
+      @keyframes fabping {
+        0% {
+          transform: scale(0.85);
+          opacity: 0.55;
+        }
+        70%,
+        100% {
+          transform: scale(1.25);
+          opacity: 0;
+        }
+      }
+      .chat {
+        position: fixed;
+        right: 1rem;
+        bottom: calc(5.6rem + env(safe-area-inset-bottom, 0px));
+        z-index: 60;
+        width: min(380px, calc(100vw - 2rem));
+        height: min(520px, calc(100svh - 8rem));
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(14px) scale(0.97);
+        transition:
+          opacity 0.22s,
+          transform 0.22s,
+          visibility 0.22s;
+        flex-direction: column;
+        background: var(--bg2);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      }
+      .chat.open {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition:
+          opacity 0.22s,
+          transform 0.22s,
+          visibility 0s;
+      }
+      .chat-h {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 700 1rem "Space Grotesk";
+      }
+      .chat-h button {
+        background: none;
+        border: 0;
+        color: var(--mu);
+        font-size: 1.4rem;
+        cursor: pointer;
+        min-width: 40px;
+        min-height: 40px;
+      }
+      .chat-log {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .msg {
+        max-width: 88%;
+        padding: 0.6rem 0.85rem;
+        border-radius: 12px;
+        font-size: 0.93rem;
+        line-height: 1.5;
+        white-space: pre-wrap;
+      }
+      .msg.bot {
+        background: var(--card);
+        border: 1px solid var(--line);
+        align-self: flex-start;
+        white-space: normal;
+      }
+      .msg p {
+        margin: 0 0 0.5rem;
+        color: var(--tx);
+      }
+      .msg p:last-child {
+        margin: 0;
+      }
+      .msg ul,
+      .msg ol {
+        margin: 0.3rem 0 0.5rem;
+        padding-left: 1.2rem;
+      }
+      .msg code {
+        background: rgba(4, 7, 15, 0.7);
+        padding: 0.1rem 0.3rem;
+        border-radius: 4px;
+      }
+      .msg a {
+        color: var(--cyan);
+      }
+      .typing {
+        display: inline-flex;
+        gap: 4px;
+        padding: 0.2rem 0;
+      }
+      .typing i {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--cyan);
+        animation: bl 1.2s infinite;
+      }
+      .typing i:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .typing i:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      @keyframes bl {
+        0%,
+        80%,
+        100% {
+          opacity: 0.25;
+        }
+        40% {
+          opacity: 1;
+        }
+      }
+      .msg.me {
+        background: #2563eb;
+        align-self: flex-end;
+      }
+      .sugg {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        padding: 0 1rem 0.6rem;
+      }
+      .sugg button {
+        background: rgba(47, 123, 255, 0.14);
+        border: 1px solid var(--line);
+        color: var(--tx);
+        border-radius: 99px;
+        padding: 0.3rem 0.7rem;
+        font: inherit;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+      .chat form {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.7rem;
+        border-top: 1px solid var(--line);
+      }
+      .chat form textarea {
+        min-height: 44px;
+        resize: none;
+      }
+      .chat form .btn {
+        padding: 0.5rem 1rem;
+      }
+      .tl {
+        border-left: 2px solid var(--line);
+        margin-left: 0.4rem;
+        padding-left: 1.4rem;
+      }
+      .tl .card {
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      .tl .card::before {
+        content: "";
+        position: absolute;
+        left: calc(-1.4rem - 7px);
+        top: 1.6rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--blue);
+        box-shadow: 0 0 12px var(--blue);
+      }
+      .meta {
+        color: var(--cyan);
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      @media (max-width: 860px) {
+        .cols {
+          grid-template-columns: 1fr;
+        }
+      }
+      ul.clean {
+        margin: 0;
+        padding-left: 1.2rem;
+        color: var(--mu);
+      }
+      ul.clean li {
+        margin: 0.45rem 0;
+      }
+      .band {
+        background: linear-gradient(
+          135deg,
+          rgba(47, 123, 255, 0.2),
+          rgba(10, 18, 36, 0.7)
+        );
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 2.4rem;
+      }
+      form {
+        display: grid;
+        gap: 1rem;
+      }
+      label {
+        font-weight: 600;
+        font-size: 0.92rem;
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        background: rgba(4, 7, 15, 0.7);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        color: var(--tx);
+        padding: 0.75rem 0.9rem;
+        font: inherit;
+        min-height: 46px;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      .err {
+        color: #ff8b8b;
+        font-size: 0.85rem;
+        min-height: 1.1em;
+        margin-top: 0.25rem;
+      }
+      input[aria-invalid="true"],
+      textarea[aria-invalid="true"] {
+        border-color: #ff8b8b;
+      }
+      .two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      @media (max-width: 600px) {
+        .two {
+          grid-template-columns: 1fr;
+        }
+      }
+      #ok {
+        display: none;
+        border: 1px solid #3ddc97;
+        background: rgba(61, 220, 151, 0.1);
+        padding: 1rem;
+        border-radius: 10px;
+        color: #cdf8e4;
+      }
+      .hp {
+        position: absolute;
+        left: -9999px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 2.2rem 0 calc(2.2rem + env(safe-area-inset-bottom, 0px));
+        color: var(--mu);
+        font-size: 0.92rem;
+      }
+      footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        justify-content: space-between;
+        align-items: center;
+      }
+      footer nav {
+        height: auto;
+        gap: 1.1rem;
+        flex-wrap: wrap;
+      }
+      footer a {
+        color: var(--mu);
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.6s,
+          transform 0.6s;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    
+      /* Larger tap targets for standalone links (accessibility) */
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 0.25rem;
+      }
+      .links a:not(.btn) {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+      }
+      ul.clean li a {
+        display: inline-block;
+        padding: 0.6rem 0;
+      }
+      footer a {
+        display: inline-block;
+        padding: 0.65rem 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <div class="wrap">
+        <nav aria-label="Main">
+          <a class="brand" href="#home" aria-label="Durgajanesh Devadula, home"
+            >DD<span>.</span></a
+          >
+          <button
+            class="menu"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="links"
+          >
+            &#9776;
+          </button>
+          <div class="links" id="links">
+            <a href="#home">Home</a><a href="#about">About</a
+            ><a href="#skills">Skills</a><a href="#experience">Experience</a
+            ><a href="#projects">Projects</a><a href="#education">Education</a
+            ><a href="#contact">Contact</a>
+            <a
+              class="btn p"
+              href="Durgajanesh_Devadula_Resume.pdf"
+              download="Durgajanesh_Devadula_Resume.pdf"
+              >Download Resume</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="wrap">
+          <div>
+            <p class="status">
+              <span class="dot" aria-hidden="true"></span>Available for
+              Freelance &amp; Project-Based Work
+            </p>
+            <h1>Durgajanesh Devadula</h1>
+            <p class="role">
+              Web Developer | AI &amp; ML Student | Open to Freelance Projects
+            </p>
+            <p
+              style="
+                font: 500 1.15rem &quot;Space Grotesk&quot;;
+                color: var(--tx);
+              "
+            >
+              “Building Real-World Solutions Through Web Development and AI.”
+            </p>
+            <p>
+              I'm interested in building practical web solutions and exploring
+              AI-powered applications. I'm looking to contribute my skills to
+              real-world projects, freelance work, and meaningful
+              collaborations.
+            </p>
+            <div class="cta">
+              <a class="btn p" href="#projects">View My Projects</a>
+              <a class="btn" href="#contact">Discuss a Project</a>
+              <a
+                class="btn"
+                href="Durgajanesh_Devadula_Resume.pdf"
+                download="Durgajanesh_Devadula_Resume.pdf"
+                >Download Resume</a
+              >
+            </div>
+          </div>
+          <div class="scene" aria-hidden="true">
+            <div class="cube">
+              <i>C#</i><i>.NET</i><i>JS</i><i>AI</i><i>SQL</i><i>CSS</i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="wrap rv">
+          <h2>About me</h2>
+          <div class="cols">
+            <div>
+              <p>
+                I'm a B.Tech Artificial Intelligence and Machine Learning
+                student with a Diploma in Computer Science and Engineering and a
+                completed six-month web development internship. I work with C#,
+                .NET, HTML, CSS, JavaScript and Bootstrap, and I've explored
+                AI-based applications, automation and computer vision through
+                projects.
+              </p>
+              <p>
+                I like learning through practical work and contributing to real
+                project goals, and I'm open to collaborating with clients and
+                teams on freelance and project-based development.
+              </p>
+            </div>
+            <ul class="clean">
+              <li>
+                Currently pursuing B.Tech in Artificial Intelligence and Machine
+                Learning
+              </li>
+              <li>Completed a Diploma in Computer Science and Engineering</li>
+              <li>Completed a six-month web development internship</li>
+              <li>
+                Interested in practical development projects and freelance
+                collaborations
+              </li>
+              <li>Exploring AI-based applications and computer vision</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="wrap rv">
+          <h2>Skills and technologies</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Web development</h3>
+              <div class="chips">
+                <span class="chip">HTML</span><span class="chip">CSS</span
+                ><span class="chip">JavaScript</span
+                ><span class="chip">Bootstrap</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Programming and backend</h3>
+              <div class="chips">
+                <span class="chip">C#</span><span class="chip">.NET</span
+                ><span class="chip">SQL</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>AI and emerging technologies</h3>
+              <div class="chips">
+                <span class="chip">Basic Artificial Intelligence</span
+                ><span class="chip">Machine Learning Concepts</span
+                ><span class="chip">AI-Based Application Development</span
+                ><span class="chip">Basic Computer Vision</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Productivity</h3>
+              <div class="chips"><span class="chip">MS Office</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="wrap rv">
+          <h2>Experience</h2>
+          <div class="tl">
+            <div class="card">
+              <span class="tag done">Completed</span>
+              <h3>Web Development Intern — Rashmitha Information System</h3>
+              <p class="meta">Six months</p>
+              <p>
+                Worked on the Mini Supermarket project as part of my web
+                development internship. This is part of my background; I'm now
+                looking for freelance and project-based work rather than
+                internships.
+              </p>
+              <div class="chips">
+                <span class="chip">C#</span><span class="chip">.NET</span
+                ><span class="chip">HTML</span><span class="chip">CSS</span
+                ><span class="chip">JavaScript</span
+                ><span class="chip">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="wrap rv">
+          <h2>Featured projects</h2>
+          <div class="grid">
+            <article class="card">
+              <div class="art">
+                <svg
+                  viewBox="0 0 240 150"
+                  role="img"
+                  aria-label="Glowing AI core with sound waves"
+                >
+                  <g fill="none" stroke="#38d0ff">
+                    <circle cx="120" cy="75" r="48" opacity=".8" />
+                    <circle
+                      cx="120"
+                      cy="75"
+                      r="33"
+                      stroke="#2f7bff"
+                      stroke-width="3"
+                    />
+                    <circle
+                      cx="120"
+                      cy="75"
+                      r="16"
+                      fill="#2f7bff"
+                      fill-opacity=".55"
+                    />
+                    <path
+                      d="M8 75h48l8-22 10 44 10-32 8 10h14M172 75h12l8-16 8 32 6-16h18"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h3>JARVIS AI — System Control Assistant</h3>
+              <p>
+                An AI-based assistant project exploring interaction with system
+                functions, basic AI concepts and automation.
+              </p>
+              <div class="chips">
+                <span class="chip">AI</span><span class="chip">Automation</span>
+              </div>
+            </article>
+            <article class="card">
+              <div class="art">
+                <svg
+                  viewBox="0 0 240 150"
+                  role="img"
+                  aria-label="Car outline inside a detection box"
+                >
+                  <rect
+                    x="38"
+                    y="34"
+                    width="164"
+                    height="82"
+                    rx="4"
+                    fill="none"
+                    stroke="#3ddc97"
+                    stroke-width="2"
+                    stroke-dasharray="7 4"
+                  />
+                  <path
+                    d="M64 100V86l14-22h84l14 22v14z"
+                    fill="#2f7bff"
+                    fill-opacity=".35"
+                    stroke="#38d0ff"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M88 66l-9 20h82l-9-20z"
+                    fill="none"
+                    stroke="#38d0ff"
+                  />
+                  <circle
+                    cx="92"
+                    cy="102"
+                    r="10"
+                    fill="#04070f"
+                    stroke="#38d0ff"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="148"
+                    cy="102"
+                    r="10"
+                    fill="#04070f"
+                    stroke="#38d0ff"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>Vehicle Detection</h3>
+              <p>
+                A computer-vision project exploring concepts for identifying
+                vehicles.
+              </p>
+              <div class="chips">
+                <span class="chip">Computer Vision</span
+                ><span class="chip">AI</span>
+              </div>
+            </article>
+            <article class="card">
+              <span class="tag">Ongoing</span>
+              <div class="art">
+                <svg
+                  viewBox="0 0 240 150"
+                  role="img"
+                  aria-label="Mountain terrain with a warning triangle"
+                >
+                  <path
+                    d="M0 130l50-52 32 30 48-62 46 56 24-20 40 48z"
+                    fill="#2f7bff"
+                    fill-opacity=".35"
+                    stroke="#38d0ff"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M120 22l22 38h-44z"
+                    fill="none"
+                    stroke="#ffb74d"
+                    stroke-width="3"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M120 33v14"
+                    stroke="#ffb74d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="120" cy="53" r="2" fill="#ffb74d" />
+                </svg>
+              </div>
+              <h3>Disaster Detection</h3>
+              <p>
+                An ongoing AI-based project applying basic AI and
+                machine-learning concepts to disaster detection.
+              </p>
+              <div class="chips">
+                <span class="chip">AI</span
+                ><span class="chip">Machine Learning</span>
+              </div>
+            </article>
+            <article class="card">
+              <span class="tag">Ongoing</span>
+              <div class="art">
+                <svg
+                  viewBox="0 0 240 150"
+                  role="img"
+                  aria-label="List of incident tickets with status dots"
+                >
+                  <g fill="rgba(47,123,255,.2)" stroke="#38d0ff">
+                    <rect x="40" y="22" width="160" height="28" rx="6" />
+                    <rect x="40" y="61" width="160" height="28" rx="6" />
+                    <rect x="40" y="100" width="160" height="28" rx="6" />
+                  </g>
+                  <circle cx="56" cy="36" r="5" fill="#ff8b8b" />
+                  <circle cx="56" cy="75" r="5" fill="#ffb74d" />
+                  <circle cx="56" cy="114" r="5" fill="#3ddc97" />
+                  <g stroke="#a3b1cc" stroke-width="3" stroke-linecap="round">
+                    <path d="M72 36h90M72 75h70M72 114h100" />
+                  </g>
+                </svg>
+              </div>
+              <h3>College Small Business IT Incident Management</h3>
+              <p>
+                An ongoing AI-assisted project focused on reporting, tracking
+                and managing technology-related incidents.
+              </p>
+              <div class="chips"><span class="chip">AI-assisted</span></div>
+            </article>
+            <article class="card">
+              <span class="tag done">Completed during internship</span>
+              <div class="art">
+                <svg
+                  viewBox="0 0 240 150"
+                  role="img"
+                  aria-label="Shopping cart with products"
+                >
+                  <path
+                    d="M62 42h22l16 56h72l14-40H92"
+                    fill="#2f7bff"
+                    fill-opacity=".3"
+                    stroke="#38d0ff"
+                    stroke-width="3"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="108"
+                    cy="114"
+                    r="8"
+                    fill="#04070f"
+                    stroke="#38d0ff"
+                    stroke-width="3"
+                  />
+                  <circle
+                    cx="162"
+                    cy="114"
+                    r="8"
+                    fill="#04070f"
+                    stroke="#38d0ff"
+                    stroke-width="3"
+                  />
+                  <rect
+                    x="112"
+                    y="60"
+                    width="18"
+                    height="24"
+                    rx="3"
+                    fill="#3ddc97"
+                    fill-opacity=".6"
+                  />
+                  <rect
+                    x="136"
+                    y="68"
+                    width="18"
+                    height="16"
+                    rx="3"
+                    fill="#38d0ff"
+                    fill-opacity=".6"
+                  />
+                </svg>
+              </div>
+              <h3>Mini Supermarket</h3>
+              <p>A project completed during my web development internship.</p>
+              <div class="chips">
+                <span class="chip">C#</span><span class="chip">.NET</span
+                ><span class="chip">HTML</span><span class="chip">CSS</span
+                ><span class="chip">JavaScript</span
+                ><span class="chip">Bootstrap</span>
+              </div>
+            </article>
+          </div>
+          <p style="margin-top: 1.6rem; color: var(--tx); font-weight: 500">
+            Have a project in mind? Let's discuss how I can contribute.
+            <a href="#contact">Start a conversation</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="wrap rv">
+          <h2>Education</h2>
+          <div class="tl">
+            <div class="card">
+              <h3>B.Tech — Artificial Intelligence and Machine Learning</h3>
+              <p class="meta">Currently pursuing · three-year program</p>
+              <p>Visakha Institute of Engineering and Technology, Narava</p>
+            </div>
+            <div class="card">
+              <h3>Diploma — Computer Science and Engineering</h3>
+              <p class="meta">2022–2025 · 80%</p>
+              <p>Visakha Institute of Engineering and Technology, Narava</p>
+            </div>
+            <div class="card">
+              <h3>ITI — Wood Work Technician (NSQF)</h3>
+              <p class="meta">2024</p>
+              <p>Sri Ramu Memorial ITI</p>
+            </div>
+            <div class="card">
+              <h3>SSC</h3>
+              <p class="meta">2021–2022 · 75%</p>
+              <p>Z.P.H. High School, Narava</p>
+            </div>
+          </div>
+          <div class="grid" style="margin-top: 2rem">
+            <div class="card">
+              <h3>Certification</h3>
+              <p>MS Office Certificate — HP</p>
+            </div>
+            <div class="card">
+              <h3>Soft skills</h3>
+              <div class="chips">
+                <span class="chip">Communication</span
+                ><span class="chip">Leadership</span
+                ><span class="chip">Problem Solving</span
+                ><span class="chip">Adaptability</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collab">
+        <div class="wrap rv">
+          <div class="band">
+            <h2>Have a Project in Mind?</h2>
+            <p>
+              I'm interested in working on real-world projects, freelance
+              development, and collaborative technical work. If you have an
+              idea, a website to build, or a development task that needs
+              attention, I'd be happy to discuss the requirements and explore
+              how I can contribute.
+            </p>
+            <ul class="clean">
+              <li>
+                Responsive website development using HTML, CSS, JavaScript and
+                Bootstrap
+              </li>
+              <li>Web development tasks involving C# and .NET</li>
+              <li>Basic database-related work using SQL</li>
+              <li>
+                AI and computer-vision project collaboration within my current
+                skills
+              </li>
+              <li>Small-business or student-project development assistance</li>
+            </ul>
+            <p style="margin-top: 1rem">
+              I'm looking for actual project work and freelance opportunities,
+              not internship placements.
+            </p>
+            <a class="btn p" href="#contact-form">Discuss Your Project</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="wrap rv">
+          <h2>Let's Work on Something Real.</h2>
+          <p>
+            If you have a freelance opportunity, a real-world project, or an
+            idea you'd like to discuss, feel free to reach out. Share a few
+            details about your project, and we can discuss the requirements and
+            next steps.
+          </p>
+          <div class="cols" style="margin-top: 1.5rem">
+            <div>
+              <ul class="clean" style="list-style: none; padding: 0">
+                <li>
+                  <a href="mailto:janeshdevadula8@gmail.com"
+                    >janeshdevadula8@gmail.com</a
+                  >
+                </li>
+                <li><a href="tel:+916281514862">6281514862</a></li>
+                <li>Visakhapatnam, Andhra Pradesh, India</li>
+                <li>
+                  <a
+                    href="https://github.com/devadula/janesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  ·
+                  <a
+                    href="https://www.linkedin.com/in/janesh-devadula-b9b70a42a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+              <p style="margin-top: 1.2rem">
+                <a
+                  class="btn"
+                  href="Durgajanesh_Devadula_Resume.pdf"
+                  download="Durgajanesh_Devadula_Resume.pdf"
+                  >Download Resume</a
+                >
+              </p>
+            </div>
+            <form id="contact-form" novalidate aria-label="Project inquiry">
+              <div class="hp" aria-hidden="true">
+                <label
+                  >Leave empty<input id="hp" tabindex="-1" autocomplete="off"
+                /></label>
+              </div>
+              <div class="two">
+                <div>
+                  <label for="n">Your name</label
+                  ><input id="n" autocomplete="name" required />
+                  <div class="err" id="en"></div>
+                </div>
+                <div>
+                  <label for="e">Your email</label
+                  ><input id="e" type="email" autocomplete="email" required />
+                  <div class="err" id="ee"></div>
+                </div>
+              </div>
+              <div>
+                <label for="s">Subject</label
+                ><input id="s" required maxlength="120" />
+                <div class="err" id="es"></div>
+              </div>
+              <div>
+                <label for="t">Inquiry type</label
+                ><select id="t">
+                  <option>Freelance Project</option>
+                  <option>Website Development</option>
+                  <option>AI/ML Project</option>
+                  <option>Collaboration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="d">Project description</label
+                ><textarea id="d" required></textarea>
+                <div class="err" id="ed"></div>
+              </div>
+              <div class="two">
+                <div>
+                  <label for="b">Budget or project scope (optional)</label
+                  ><input id="b" />
+                </div>
+                <div>
+                  <label for="tl">Preferred timeline (optional)</label
+                  ><input id="tl" />
+                </div>
+              </div>
+              <button class="btn p" type="submit" id="sb">Send</button>
+              <div id="ok" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>© <span id="yr"></span> Durgajanesh Devadula</div>
+        <nav aria-label="Footer">
+          <a href="#about">About</a><a href="#projects">Projects</a
+          ><a href="#education">Education</a><a href="#contact">Contact</a
+          ><a href="mailto:janeshdevadula8@gmail.com">Email</a
+          ><a
+            href="https://github.com/devadula/janesh"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          ><a
+            href="https://www.linkedin.com/in/janesh-devadula-b9b70a42a"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </nav>
+        <a href="#home">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <button
+      class="chat-fab"
+      id="cf"
+      type="button"
+      aria-label="Chat with the portfolio assistant"
+      title="Ask about my work"
+      aria-expanded="false"
+      aria-controls="chat"
+    >
+      <svg
+        class="i-chat"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z" />
+        <path d="M8.5 11h.01M12 11h.01M15.5 11h.01" stroke-width="2.6" /></svg
+      ><svg
+        class="i-x"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.2"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <div class="chat" id="chat" role="dialog" aria-label="Portfolio assistant">
+      <div class="chat-h">
+        <span style="display: flex; align-items: center; gap: 0.55rem"
+          ><span class="dot" aria-hidden="true"></span
+          ><span
+            >Portfolio assistant<small
+              style="
+                display: block;
+                font:
+                  400 0.72rem Inter,
+                  sans-serif;
+                color: var(--mu);
+              "
+              >AI assistant · Online</small
+            ></span
+          ></span
+        ><span
+          ><button
+            id="cc"
+            aria-label="Clear chat"
+            title="Clear chat"
+            style="font-size: 0.8rem; width: auto; padding: 0 0.5rem"
+          >
+            Clear</button
+          ><button id="cx" aria-label="Close chat">&times;</button></span
+        >
+      </div>
+      <div class="chat-log" id="cl" aria-live="polite"></div>
+      <div class="sugg" id="cs">
+        <button>Who is this developer?</button
+        ><button>What are the technical skills?</button
+        ><button>Show me the latest projects.</button
+        ><button>What technologies does he use?</button
+        ><button>Tell me about his experience.</button
+        ><button>How can I contact him?</button>
+      </div>
+      <form id="cfm">
+        <label class="hp" for="ci">Your question</label
+        ><textarea
+          id="ci"
+          rows="1"
+          placeholder="Ask a question…"
+          maxlength="500"
+          style="min-height: 44px; max-height: 110px"
+        ></textarea
+        ><button class="btn p" type="submit" id="cb">Send</button>
+      </form>
+    </div>
+    <script src="chat-widget.js" defer></script>
+  </body>
+</html>

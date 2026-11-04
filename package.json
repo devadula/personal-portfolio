@@ -1,0 +1,28 @@
+{
+  "name": "devadula-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio website with Gemini chatbot and email contact form",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node dev-server.js",
+    "dev:vercel": "npx vercel dev",
+    "check": "node --check dev-server.js && node --check chat-widget.js && node --check site.js && node --check api/chat.js && node --check api/contact.js && node --check api/_knowledge.js && node --check scripts/env.js && node --check scripts/live-gemini.js && node --check scripts/live-email.js && node --check scripts/set-site-url.js && node --check api/_ratelimit.js && node --check api/_guard.js && node --check api/health.js && node --check scripts/check-secrets.js && node scripts/check-secrets.js",
+    "deploy": "npx vercel --prod",
+    "test:gemini": "node scripts/live-gemini.js",
+    "test:email": "node scripts/live-email.js",
+    "set-url": "node scripts/set-site-url.js",
+    "check:secrets": "node scripts/check-secrets.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0"
+  },
+  "allowScripts": {
+    "@google/genai@1.52.0": true,
+    "protobufjs@7.6.6": true
+  }
+}

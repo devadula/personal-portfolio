@@ -19,7 +19,8 @@
     "test": "node --test"
   },
   "dependencies": {
-    "@google/genai": "^1.0.0"
+    "@google/genai": "^1.0.0",
+    "@google/generative-ai": "^0.24.1"
   },
   "allowScripts": {
     "@google/genai@1.52.0": true,

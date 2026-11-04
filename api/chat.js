@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/generative-ai"; // Fixed SDK package name
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { KNOWLEDGE } from "./_knowledge.js";
 import { limit, today } from "./_ratelimit.js";
 import { guardRequest, clientIp, logEvent } from "./_guard.js";
@@ -266,7 +266,7 @@ export default async function handler(req, res) {
     ...new Set([workingModel, preferred, ...FALLBACK_MODELS].filter(Boolean)),
   ].filter((m) => !deadModels.has(m));
 
-  const ai = new GoogleGenAI(apiKey); // Fixed SDK Initialization
+  const ai = new GoogleGenerativeAI(apiKey); // Fixed SDK Initialization
   const started = Date.now();
   let lastErr = null,
     lastCode = "model",

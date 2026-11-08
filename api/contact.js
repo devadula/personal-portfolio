@@ -2,16 +2,9 @@
 import { randomUUID } from "node:crypto";
 import { limit, today } from "./_ratelimit.js";
 import { guardRequest, clientIp, logEvent } from "./_guard.js";
-const TO = process.env.CONTACT_EMAIL || process.env.CONTACT_TO_EMAIL;
-const FROM = process.env.CONTACT_FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>";
-// Detailed error text is shown only in development, and never on a production deployment.
-const DEV =
-  process.env.VERCEL_ENV !== "production" &&
-  (process.env.DEV_MODE === "1" || process.env.VERCEL_ENV === "development");
-const SEND_TIMEOUT_MS = Number(process.env.RESEND_TIMEOUT_MS) || 10000; // per attempt
+
 const TYPES = ["Freelance Project", "Website Development", "AI/ML Project", "Collaboration", "Other"];
 const MAX_PER_10_MIN = 5; // per visitor
-const DAILY_LIMIT = Number(process.env.CONTACT_DAILY_LIMIT) || 40; // whole site per day (Resend free plan allows 100/day)
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -51,11 +44,25 @@ function validate(d) {
 
 // Sends through Resend with a timeout and at most one retry (exponential backoff + jitter) for temporary problems only
 // (network error, timeout, HTTP 429/5xx). The same Idempotency-Key is sent on both tries so a retry cannot create a duplicate email.
-async function sendEmail(payload, idempotencyKey) {
+async function sendEmail(payload, idempotencyKey, timeoutMs) {
   const attempts = 2;
   let why = "unknown error";
   for (let i = 0; i < attempts; i++) {
     try {
+      const signal =
+        typeof AbortSignal !== "undefined" && typeof AbortSignal.timeout === "function"
+          ? AbortSignal.timeout(timeoutMs)
+          : (() => {
+              const controller = new AbortController();
+              const timer = setTimeout(() => {
+                const err = new Error("TimeoutError");
+                err.name = "TimeoutError";
+                controller.abort(err);
+              }, timeoutMs);
+              if (timer.unref) timer.unref();
+              return controller.signal;
+            })();
+
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
@@ -64,7 +71,7 @@ async function sendEmail(payload, idempotencyKey) {
           "Idempotency-Key": idempotencyKey,
         },
         body: JSON.stringify(payload),
-        signal: AbortSignal.timeout(SEND_TIMEOUT_MS),
+        signal,
       });
       let j = {};
       try { j = await r.json(); } catch { /* non-JSON response */ }
@@ -73,7 +80,7 @@ async function sendEmail(payload, idempotencyKey) {
       why = `Resend ${r.status}: ${j?.message || j?.name || "no details"}`;
       if (!(r.status === 429 || r.status >= 500)) return { ok: false, why };
     } catch (err) {
-      why = err?.name === "TimeoutError" ? `Resend did not answer within ${SEND_TIMEOUT_MS} ms` : String(err?.message || err).slice(0, 200);
+      why = err?.name === "TimeoutError" ? `Resend did not answer within ${timeoutMs} ms` : String(err?.message || err).slice(0, 200);
     }
     if (i < attempts - 1) await new Promise((r) => setTimeout(r, 400 * 2 ** i + Math.random() * 250));
   }
@@ -85,7 +92,17 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed." });
   if (guardRequest(req, res, { maxBytes: 16000 })) return;
 
-  if (!process.env.RESEND_API_KEY || !TO)
+  const toRaw = process.env.CONTACT_EMAIL || process.env.CONTACT_TO_EMAIL || "";
+  const toEmails = toRaw.split(",").map((e) => e.trim()).filter(Boolean);
+  const fromRaw = process.env.CONTACT_FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>";
+  const fromEmail = fromRaw.trim();
+  const dev =
+    process.env.VERCEL_ENV !== "production" &&
+    (process.env.DEV_MODE === "1" || process.env.VERCEL_ENV === "development");
+  const timeoutMs = Number(process.env.RESEND_TIMEOUT_MS) || 10000;
+  const dailyLimit = Number(process.env.CONTACT_DAILY_LIMIT) || 40;
+
+  if (!process.env.RESEND_API_KEY || toEmails.length === 0)
     return res.status(500).json({ error: "Contact form is not configured." });
 
   const body = readBody(req);
@@ -104,7 +121,7 @@ export default async function handler(req, res) {
     logEvent("rate_limited", req, { scope: "visitor" });
     return res.status(429).json({ error: "Too many messages. Please try again later." });
   }
-  if (!(await limit(`contact:day:${today()}`, DAILY_LIMIT, 90000)).allowed) {
+  if (!(await limit(`contact:day:${today()}`, dailyLimit, 90000)).allowed) {
     logEvent("rate_limited", req, { scope: "site_day" });
     return res.status(429).json({ error: "Daily message limit reached. Please try again tomorrow." });
   }
@@ -120,13 +137,14 @@ export default async function handler(req, res) {
     `</table><p style="font-family:Arial,sans-serif;font-size:14px;white-space:pre-wrap"><b>Message</b><br>${esc(d.message)}</p>`;
 
   const out = await sendEmail(
-    { from: FROM, to: [TO], reply_to: d.email, subject: `[Portfolio] ${d.subject}`, html, text },
-    randomUUID()
+    { from: fromEmail, to: toEmails, reply_to: d.email, subject: `[Portfolio] ${d.subject}`, html, text },
+    randomUUID(),
+    timeoutMs
   );
   if (!out.ok) {
     console.error("Email not sent ->", out.why);
     logEvent("email_failed", req);
-    return res.status(502).json({ error: "Could not send your message right now.", ...(DEV && { detail: out.why }) });
+    return res.status(502).json({ error: "Could not send your message right now.", ...(dev && { detail: out.why }) });
   }
-  return res.status(200).json({ ok: true, ...(DEV && { id: out.id }) });
+  return res.status(200).json({ ok: true, ...(dev && { id: out.id }) });
 }

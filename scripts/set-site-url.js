@@ -21,6 +21,9 @@ if (start === -1 || end === -1) {
   process.exit(1);
 }
 const startLineEnd = html.indexOf("-->", start) + 3;
+// Everything between the markers is replaced, so the placeholders that ship
+// with the page do not end up next to the real addresses.
+const endBlockStart = html.lastIndexOf("<!--", end);
 const block = `
     <link rel="canonical" href="${site}/" />
     <meta property="og:url" content="${site}/" />
@@ -29,7 +32,7 @@ const block = `
     <meta property="og:image:height" content="630" />
     <meta name="twitter:image" content="${site}/og-image.png" />
     `;
-html = html.slice(0, startLineEnd) + block + html.slice(end);
+html = html.slice(0, startLineEnd) + block + html.slice(endBlockStart);
 fs.writeFileSync(htmlPath, html);
 
 fs.writeFileSync(

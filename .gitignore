@@ -6,3 +6,14 @@ node_modules
 .DS_Store
 *.log
 npm-debug.log*
+
+# Impeccable design tooling (installed locally, not part of the published site).
+# Reinstall with: node .minimax/install-impeccable.mjs <path-to>/impeccable/plugin/skills/impeccable
+.minimax/skills/
+.impeccable/
+
+# Local audit tools and their leftovers.
+.taste-skill/
+.dev-server.pid
+.dev-server.log
+.dev-server.err.log

@@ -6,7 +6,14 @@ import path from "node:path";
 import { execSync } from "node:child_process";
 import { root } from "./env.js";
 
-const SKIP_DIRS = new Set(["node_modules", ".git", ".vercel"]);
+const SKIP_DIRS = new Set([
+  "node_modules",
+  ".git",
+  ".vercel",
+  ".minimax",
+  ".taste-skill",
+  ".impeccable",
+]);
 const SKIP_FILES = new Set([".env", "package-lock.json"]);
 const PATTERNS = [
   [/AIza[0-9A-Za-z_-]{20,}/, "Google API key"],
@@ -27,7 +34,13 @@ function walk(dir) {
     if (st.isDirectory()) { walk(full); continue; }
     if (SKIP_FILES.has(name) || st.size > 2_000_000) continue;
     if (/\.(png|jpe?g|gif|pdf|zip|ico|woff2?)$/i.test(name)) continue;
-    const text = fs.readFileSync(full, "utf8");
+    let text;
+    try {
+      text = fs.readFileSync(full, "utf8");
+    } catch {
+      // A file another process is writing (a log, a cache) is not a secret.
+      continue;
+    }
     for (const [re, label] of PATTERNS)
       if (re.test(text)) bad(`${label} found in ${path.relative(root, full)} (value not shown)`);
   }

@@ -1,5 +1,6 @@
 (function () {
   const fab = document.getElementById("cf"),
+    askBtn = document.getElementById("ask-chat"),
     box = document.getElementById("chat"),
     log = document.getElementById("cl"),
     inp = document.getElementById("ci"),
@@ -7,7 +8,7 @@
     form = document.getElementById("cfm"),
     sendBtn = document.getElementById("cb");
   const GREETING =
-    "Hi! \uD83D\uDC4B I'm the AI assistant for this portfolio. Feel free to ask me anything about my skills, projects, experience, or background. How can I help you today?";
+    "Hello — I'm the assistant for this portfolio. Ask me about the projects, the technical skills or the internship, and I will answer from what is documented here. For anything else, use the enquiry form in the Contact section.";
   // Minimal, safe Markdown: input is HTML-escaped first, links must be http(s).
   function esc(s) {
     return s
@@ -65,6 +66,11 @@
   }
   let history = [];
   let busy = false;
+  // The assistant can be opened from the floating button or from the bar, so
+  // both are kept in step and focus returns to whichever one was used.
+  let lastTrigger = fab;
+
+  const visible = (el) => !!el && el.getClientRects().length > 0;
 
   function add(cls, text) {
     const d = document.createElement("div");
@@ -82,15 +88,27 @@
     add("bot", GREETING);
   }
 
-  function toggle(open) {
+  function toggle(open, source) {
     box.classList.toggle("open", open);
-    fab.setAttribute("aria-expanded", open);
+    if (fab) fab.setAttribute("aria-expanded", open ? "true" : "false");
+    if (askBtn) askBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (fab)
+      fab.setAttribute(
+        "aria-label",
+        open ? "Close the portfolio assistant" : "Open the portfolio assistant",
+      );
     if (open) {
+      if (source) lastTrigger = source;
       if (!log.children.length) add("bot", GREETING);
       inp.focus();
       // If the panel was not visible yet, try once more on the next frame.
       if (document.activeElement !== inp) requestAnimationFrame(() => inp.focus());
-    } else fab.focus();
+    } else {
+      // Send focus back to the control that opened the panel, or to the first
+      // one that is on screen, so closing never strands the keyboard.
+      const back = [lastTrigger, fab, askBtn, document.getElementById("menu")].find(visible);
+      if (back) back.focus();
+    }
   }
 
   async function ask(q) {
@@ -101,8 +119,7 @@
     add("me", q);
     history.push({ role: "user", content: q });
     const el = add("bot", "");
-    el.innerHTML =
-      '<span class="typing" role="status" aria-label="Assistant is typing"><i></i><i></i><i></i></span>';
+    el.innerHTML = '<span class="typing" role="status">Writing a reply…</span>';
     const ctl = new AbortController();
     const timer = setTimeout(() => ctl.abort(), 45000);
     try {
@@ -184,7 +201,7 @@
     ask(q);
   }
 
-  fab.addEventListener("click", () => toggle(!box.classList.contains("open")));
+  fab.addEventListener("click", () => toggle(!box.classList.contains("open"), fab));
   document.getElementById("cx").addEventListener("click", () => toggle(false));
   document.getElementById("cc").addEventListener("click", reset);
   // Escape closes the chat from anywhere (not only when focus is inside it).
@@ -208,4 +225,12 @@
   sg.querySelectorAll("button").forEach((b) =>
     b.addEventListener("click", () => ask(b.textContent)),
   );
+
+  // A small handle so the page (the bar button and the mobile menu) can open
+  // the assistant.
+  window.portfolioAssistant = {
+    open: (source) => toggle(true, source),
+    close: () => toggle(false),
+    toggle: (source) => toggle(!box.classList.contains("open"), source),
+  };
 })();

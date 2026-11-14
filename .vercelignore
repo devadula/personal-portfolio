@@ -7,3 +7,11 @@ scripts
 tests
 .github
 node_modules
+.minimax
+.impeccable
+.taste-skill
+.dev-server.pid
+.dev-server.log
+.dev-server.err.log
+DESIGN.md
+PRODUCT.md

@@ -132,9 +132,9 @@ export default async function handler(req, res) {
   ];
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n") + `\n\nMessage:\n${d.message}`;
   const html =
-    `<table cellpadding="6" style="font-family:Arial,sans-serif;font-size:14px">` +
-    rows.map(([k, v]) => `<tr><td><b>${k}</b></td><td>${esc(v)}</td></tr>`).join("") +
-    `</table><p style="font-family:Arial,sans-serif;font-size:14px;white-space:pre-wrap"><b>Message</b><br>${esc(d.message)}</p>`;
+    `<table cellpadding="6" style="font-family:'Segoe UI',Tahoma,Geneva,sans-serif;font-size:14px">` +
+    rows.map(([k, v]) => `<tr><td><b>${esc(k)}</b></td><td>${esc(v)}</td></tr>`).join("") +
+    `</table><p style="font-family:'Segoe UI',Tahoma,Geneva,sans-serif;font-size:14px;white-space:pre-wrap"><b>Message</b><br>${esc(d.message)}</p>`;
 
   const out = await sendEmail(
     { from: fromEmail, to: toEmails, reply_to: d.email, subject: `[Portfolio] ${d.subject}`, html, text },

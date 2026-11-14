@@ -1,1549 +1,794 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="m-enter">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>
-      Durgajanesh Devadula – Web Developer | AI & ML Student | Open to Freelance
-      Projects
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Durgajanesh Devadula — Web Developer &amp; AI/ML Student, Visakhapatnam</title>
     <meta
       name="description"
-      content="Portfolio of Durgajanesh Devadula, a web developer and B.Tech AI & ML student available for freelance and project-based work."
+      content="Durgajanesh Devadula is a web developer and B.Tech AI &amp; ML student in Visakhapatnam, India. He builds web applications in C#, .NET, HTML, CSS, JavaScript and Bootstrap, and works on AI and computer-vision projects."
     />
-    <meta name="theme-color" content="#04070f" />
+    <meta name="theme-color" content="#f3f2ee" />
     <meta name="author" content="Durgajanesh Devadula" />
-    <meta property="og:type" content="website" />
+    <meta name="color-scheme" content="light" />
+
+    <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="Durgajanesh Devadula" />
-    <meta property="og:title" content="Durgajanesh Devadula – Web Developer | AI & ML Student" />
-    <meta property="og:description" content="Web developer and B.Tech AI & ML student available for freelance and project-based work." />
+    <meta property="og:title" content="Durgajanesh Devadula — Web Developer &amp; AI/ML Student" />
+    <meta
+      property="og:description"
+      content="Web applications in C#, .NET and JavaScript, plus AI and computer-vision projects. Based in Visakhapatnam, India; open to freelance and project-based work."
+    />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Durgajanesh Devadula – Web Developer | AI & ML Student" />
-    <meta name="twitter:description" content="Web developer and B.Tech AI & ML student available for freelance and project-based work." />
+    <meta name="twitter:title" content="Durgajanesh Devadula — Web Developer &amp; AI/ML Student" />
+    <meta
+      name="twitter:description"
+      content="Web applications in C#, .NET and JavaScript, plus AI and computer-vision projects. Based in Visakhapatnam, India; open to freelance and project-based work."
+    />
     <!-- SEO-URL-START (filled by: npm run set-url -- https://your-live-address) -->
+    <!-- Placeholders: relative, so a shared link still shows the card. The
+         set-url script replaces this whole block with absolute addresses. -->
+    <link rel="canonical" href="./" />
+    <meta property="og:image" content="og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content="og-image.png" />
     <!-- SEO-URL-END -->
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Durgajanesh Devadula",
-        "jobTitle": "Web Developer and AI & ML Student",
+        "jobTitle": "Web Developer",
+        "description": "Web developer and B.Tech Artificial Intelligence and Machine Learning student in Visakhapatnam, India.",
         "email": "mailto:janeshdevadula8@gmail.com",
+        "telephone": "+91-62815-14862",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Visakhapatnam",
           "addressRegion": "Andhra Pradesh",
           "addressCountry": "IN"
         },
-        "knowsAbout": ["HTML", "CSS", "JavaScript", "Bootstrap", "C#", ".NET", "SQL"],
+        "knowsAbout": [
+          "C#",
+          ".NET",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Bootstrap",
+          "SQL",
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Computer Vision"
+        ],
+        "knowsLanguage": ["en", "te"],
         "sameAs": [
           "https://github.com/devadula/janesh",
           "https://www.linkedin.com/in/janesh-devadula-b9b70a42a"
         ]
       }
     </script>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2304070f%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%2338d0ff%27%3EDD%3C/text%3E%3C/svg%3E"
-    />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&family=Tiro+Telugu:ital@0;1&display=swap"
     />
-    <style>
-      :root {
-        --bg: #04070f;
-        --bg2: #0a1224;
-        --card: rgba(20, 34, 66, 0.55);
-        --line: rgba(80, 140, 255, 0.22);
-        --blue: #2f7bff;
-        --cyan: #38d0ff;
-        --tx: #f2f6ff;
-        --mu: #a3b1cc;
-        box-sizing: border-box;
-        padding-top: env(safe-area-inset-top, 0px);
-        padding-bottom: env(safe-area-inset-bottom, 0px);
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          color-scheme: dark;
-        }
-      }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px));
-      }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--tx);
-        font:
-          400 1rem/1.65 Inter,
-          system-ui,
-          sans-serif;
-        overflow-x: hidden;
-        background-image:
-          linear-gradient(var(--line) 1px, transparent 1px),
-          linear-gradient(90deg, var(--line) 1px, transparent 1px);
-        background-size: 56px 56px;
-        background-attachment: fixed;
-      }
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background:
-          radial-gradient(
-            60% 50% at 80% 0,
-            rgba(47, 123, 255, 0.28),
-            transparent 70%
-          ),
-          radial-gradient(
-            50% 40% at 0 100%,
-            rgba(56, 208, 255, 0.14),
-            transparent 70%
-          ),
-          linear-gradient(var(--bg) 0, rgba(4, 7, 15, 0.82) 100%);
-        z-index: -1;
-        pointer-events: none;
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Space Grotesk", Inter, sans-serif;
-        line-height: 1.12;
-        margin: 0 0 0.6rem;
-      }
-      h1 {
-        font-size: clamp(2.3rem, 7vw, 4.6rem);
-        letter-spacing: -0.03em;
-      }
-      h2 {
-        font-size: clamp(1.7rem, 4vw, 2.5rem);
-        letter-spacing: -0.02em;
-        margin-bottom: 1.4rem;
-      }
-      h3 {
-        font-size: 1.2rem;
-      }
-      p {
-        margin: 0 0 1rem;
-        color: var(--mu);
-        max-width: 68ch;
-      }
-      a {
-        color: var(--cyan);
-      }
-      :focus-visible {
-        outline: 3px solid var(--cyan);
-        outline-offset: 3px;
-        border-radius: 6px;
-      }
-      .wrap {
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 0 1.25rem;
-      }
-      section {
-        padding: 5rem 0;
-      }
-      .skip {
-        position: absolute;
-        left: -999px;
-        top: 0;
-        background: var(--blue);
-        color: #fff;
-        padding: 0.6rem 1rem;
-        z-index: 99;
-      }
-      .skip:focus {
-        left: 0;
-      }
-      header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        padding-top: env(safe-area-inset-top, 0px);
-        background: rgba(4, 7, 15, 0.78);
-        backdrop-filter: blur(14px);
-        border-bottom: 1px solid var(--line);
-      }
-      nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 68px;
-        gap: 1rem;
-      }
-      .brand {
-        font:
-          700 1.3rem "Space Grotesk",
-          sans-serif;
-        color: var(--tx);
-        text-decoration: none;
-        letter-spacing: -0.02em;
-      }
-      .brand span {
-        color: var(--cyan);
-      }
-      .links {
-        display: flex;
-        gap: 1.3rem;
-        align-items: center;
-      }
-      .links a {
-        color: var(--mu);
-        text-decoration: none;
-        font-size: 0.93rem;
-        font-weight: 500;
-      }
-      .links a:hover {
-        color: var(--tx);
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 0.8rem 1.35rem;
-        border-radius: 10px;
-        font:
-          600 0.95rem Inter,
-          sans-serif;
-        text-decoration: none;
-        border: 1px solid var(--blue);
-        cursor: pointer;
-        transition:
-          transform 0.15s,
-          box-shadow 0.2s,
-          background 0.2s;
-        color: var(--tx);
-        background: transparent;
-        min-height: 44px;
-      }
-      .btn:hover {
-        transform: translateY(-2px);
-      }
-      .btn.p {
-        background: linear-gradient(135deg, #2563eb, #1a56d6);
-        box-shadow: 0 8px 28px rgba(47, 123, 255, 0.35);
-      }
-      .links .btn {
-        padding: 0.55rem 1rem;
-        min-height: 40px;
-      }
-      .links .btn.p {
-        color: #fff;
-      }
-      .menu {
-        display: none;
-        background: none;
-        border: 1px solid var(--line);
-        color: var(--tx);
-        border-radius: 8px;
-        width: 44px;
-        height: 44px;
-        font-size: 1.3rem;
-        cursor: pointer;
-      }
-      @media (max-width: 860px) {
+    <link rel="stylesheet" href="styles.css" />
+    <noscript>
+      <!-- Without scripting there is no menu button to press, so the links stay
+           in the bar and wrap onto a second line instead of hiding. -->
+      <style>
         .menu {
-          display: block;
-        }
-        .links {
           display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          flex-direction: column;
-          align-items: stretch;
-          background: var(--bg2);
-          padding: 1rem 1.25rem 1.4rem;
-          border-bottom: 1px solid var(--line);
         }
-        .links.open {
+
+        .nav {
+          display: block;
+          height: auto;
+          padding-bottom: 0.75rem;
+        }
+
+        .brand {
+          display: inline-block;
+          margin-bottom: 0.5rem;
+        }
+
+        .links {
+          position: static;
           display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 0.3rem 0.9rem;
+          font-size: 0.875rem;
         }
+
         .links a {
-          padding: 0.5rem 0;
+          min-height: 0;
         }
-      }
-      .hero {
-        min-height: 100svh;
-        display: flex;
-        align-items: center;
-        padding: 7rem 0 4rem;
-      }
-      .hero .wrap {
-        display: grid;
-        grid-template-columns: 1.25fr 0.75fr;
-        gap: 2rem;
-        align-items: center;
-      }
-      @media (max-width: 860px) {
-        .hero .wrap {
-          grid-template-columns: 1fr;
+
+        .links-action {
+          display: none;
         }
-        .scene {
-          order: -1;
-          height: 190px !important;
-        }
-      }
-      .status {
-        display: inline-flex;
-        gap: 0.6rem;
-        align-items: center;
-        border: 1px solid var(--line);
-        background: var(--card);
-        padding: 0.4rem 0.9rem;
-        border-radius: 99px;
-        font-size: 0.88rem;
-        margin-bottom: 1.3rem;
-      }
-      .dot {
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: #3ddc97;
-        box-shadow: 0 0 0 0 rgba(61, 220, 151, 0.6);
-        animation: pulse 2s infinite;
-      }
-      @keyframes pulse {
-        70% {
-          box-shadow: 0 0 0 9px rgba(61, 220, 151, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(61, 220, 151, 0);
-        }
-      }
-      .role {
-        font: 500 clamp(1.05rem, 2.4vw, 1.4rem) "Space Grotesk";
-        color: var(--cyan);
-        margin-bottom: 1rem;
-      }
-      .cta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        margin-top: 1.6rem;
-      }
-      .scene {
-        height: 340px;
-        perspective: 900px;
-        display: grid;
-        place-items: center;
-      }
-      .cube {
-        width: 150px;
-        height: 150px;
-        position: relative;
-        transform-style: preserve-3d;
-        animation: spin 18s linear infinite;
-      }
-      .cube i {
-        position: absolute;
-        inset: 0;
-        border: 1.5px solid var(--cyan);
-        background: rgba(47, 123, 255, 0.1);
-        box-shadow:
-          inset 0 0 30px rgba(47, 123, 255, 0.35),
-          0 0 18px rgba(56, 208, 255, 0.25);
-        display: grid;
-        place-items: center;
-        font: 700 1.1rem "Space Grotesk";
-        color: var(--cyan);
-      }
-      .cube i:nth-child(1) {
-        transform: translateZ(75px);
-      }
-      .cube i:nth-child(2) {
-        transform: rotateY(180deg) translateZ(75px);
-      }
-      .cube i:nth-child(3) {
-        transform: rotateY(90deg) translateZ(75px);
-      }
-      .cube i:nth-child(4) {
-        transform: rotateY(-90deg) translateZ(75px);
-      }
-      .cube i:nth-child(5) {
-        transform: rotateX(90deg) translateZ(75px);
-      }
-      .cube i:nth-child(6) {
-        transform: rotateX(-90deg) translateZ(75px);
-      }
-      @keyframes spin {
-        to {
-          transform: rotateX(-20deg) rotateY(360deg);
-        }
-      }
-      .cube {
-        transform: rotateX(-20deg) rotateY(30deg);
-      }
-      .grid {
-        display: grid;
-        gap: 1.1rem;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      }
-      .card {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 1.4rem;
-        backdrop-filter: blur(8px);
-        transition:
-          border-color 0.2s,
-          transform 0.2s;
-      }
-      .card:hover {
-        border-color: var(--cyan);
-        transform: translateY(-3px);
-      }
-      .card p {
-        font-size: 0.95rem;
-        margin-bottom: 0.6rem;
-      }
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
-        margin-top: 0.5rem;
-      }
-      .chip {
-        border: 1px solid var(--line);
-        background: rgba(47, 123, 255, 0.12);
-        color: var(--tx);
-        padding: 0.25rem 0.7rem;
-        border-radius: 99px;
-        font-size: 0.85rem;
-      }
-      .tag {
-        display: inline-block;
-        font-size: 0.78rem;
-        font-weight: 600;
-        padding: 0.2rem 0.6rem;
-        border-radius: 6px;
-        background: rgba(61, 220, 151, 0.14);
-        color: #7ff0bd;
-        margin-bottom: 0.7rem;
-      }
-      .tag.done {
-        background: rgba(56, 208, 255, 0.14);
-        color: var(--cyan);
-      }
-      .art {
-        height: 150px;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        border: 1px solid var(--line);
-        overflow: hidden;
-        background:
-          linear-gradient(135deg, rgba(47, 123, 255, 0.3), rgba(4, 7, 15, 0.5)),
-          repeating-linear-gradient(
-            45deg,
-            transparent 0 12px,
-            rgba(56, 208, 255, 0.07) 12px 13px
-          );
-      }
-      .art svg {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      .chat-fab {
-        position: fixed;
-        right: 1rem;
-        bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-        z-index: 60;
-        width: 60px;
-        height: 60px;
-        padding: 0;
-        border-radius: 50%;
-        border: 1px solid var(--cyan);
-        background: linear-gradient(135deg, #2563eb, #1a56d6);
-        color: #fff;
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-        box-shadow: 0 8px 28px rgba(47, 123, 255, 0.5);
-        transition:
-          transform 0.15s,
-          box-shadow 0.2s;
-      }
-      .chat-fab:hover {
-        transform: scale(1.07);
-        box-shadow: 0 10px 34px rgba(56, 208, 255, 0.55);
-      }
-      .chat-fab svg {
-        width: 28px;
-        height: 28px;
-        display: block;
-      }
-      .chat-fab .i-x {
-        display: none;
-      }
-      .chat-fab[aria-expanded="true"] .i-chat {
-        display: none;
-      }
-      .chat-fab[aria-expanded="true"] .i-x {
-        display: block;
-      }
-      .chat-fab::after {
-        content: "";
-        position: absolute;
-        inset: -6px;
-        border-radius: 50%;
-        border: 2px solid var(--cyan);
-        opacity: 0;
-        animation: fabping 2.6s ease-out infinite;
-        pointer-events: none;
-      }
-      .chat-fab[aria-expanded="true"]::after {
-        display: none;
-      }
-      @keyframes fabping {
-        0% {
-          transform: scale(0.85);
-          opacity: 0.55;
-        }
-        70%,
-        100% {
-          transform: scale(1.25);
-          opacity: 0;
-        }
-      }
-      .chat {
-        position: fixed;
-        right: 1rem;
-        bottom: calc(5.6rem + env(safe-area-inset-bottom, 0px));
-        z-index: 60;
-        width: min(380px, calc(100vw - 2rem));
-        height: min(520px, calc(100svh - 8rem));
-        display: flex;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(14px) scale(0.97);
-        transition:
-          opacity 0.22s,
-          transform 0.22s,
-          visibility 0.22s;
-        flex-direction: column;
-        background: var(--bg2);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-      }
-      .chat.open {
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        transition:
-          opacity 0.22s,
-          transform 0.22s,
-          visibility 0s;
-      }
-      .chat-h {
-        padding: 0.8rem 1rem;
-        border-bottom: 1px solid var(--line);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font: 700 1rem "Space Grotesk";
-      }
-      .chat-h button {
-        background: none;
-        border: 0;
-        color: var(--mu);
-        font-size: 1.4rem;
-        cursor: pointer;
-        min-width: 40px;
-        min-height: 40px;
-      }
-      .chat-log {
-        flex: 1;
-        overflow-y: auto;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-      .msg {
-        max-width: 88%;
-        padding: 0.6rem 0.85rem;
-        border-radius: 12px;
-        font-size: 0.93rem;
-        line-height: 1.5;
-        white-space: pre-wrap;
-      }
-      .msg.bot {
-        background: var(--card);
-        border: 1px solid var(--line);
-        align-self: flex-start;
-        white-space: normal;
-      }
-      .msg p {
-        margin: 0 0 0.5rem;
-        color: var(--tx);
-      }
-      .msg p:last-child {
-        margin: 0;
-      }
-      .msg ul,
-      .msg ol {
-        margin: 0.3rem 0 0.5rem;
-        padding-left: 1.2rem;
-      }
-      .msg code {
-        background: rgba(4, 7, 15, 0.7);
-        padding: 0.1rem 0.3rem;
-        border-radius: 4px;
-      }
-      .msg a {
-        color: var(--cyan);
-      }
-      .typing {
-        display: inline-flex;
-        gap: 4px;
-        padding: 0.2rem 0;
-      }
-      .typing i {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--cyan);
-        animation: bl 1.2s infinite;
-      }
-      .typing i:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .typing i:nth-child(3) {
-        animation-delay: 0.4s;
-      }
-      @keyframes bl {
-        0%,
-        80%,
-        100% {
-          opacity: 0.25;
-        }
-        40% {
-          opacity: 1;
-        }
-      }
-      .msg.me {
-        background: #2563eb;
-        align-self: flex-end;
-      }
-      .sugg {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-        padding: 0 1rem 0.6rem;
-      }
-      .sugg button {
-        background: rgba(47, 123, 255, 0.14);
-        border: 1px solid var(--line);
-        color: var(--tx);
-        border-radius: 99px;
-        padding: 0.3rem 0.7rem;
-        font: inherit;
-        font-size: 0.8rem;
-        cursor: pointer;
-      }
-      .chat form {
-        display: flex;
-        gap: 0.5rem;
-        padding: 0.7rem;
-        border-top: 1px solid var(--line);
-      }
-      .chat form textarea {
-        min-height: 44px;
-        resize: none;
-      }
-      .chat form .btn {
-        padding: 0.5rem 1rem;
-      }
-      .tl {
-        border-left: 2px solid var(--line);
-        margin-left: 0.4rem;
-        padding-left: 1.4rem;
-      }
-      .tl .card {
-        margin-bottom: 1rem;
-        position: relative;
-      }
-      .tl .card::before {
-        content: "";
-        position: absolute;
-        left: calc(-1.4rem - 7px);
-        top: 1.6rem;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: var(--blue);
-        box-shadow: 0 0 12px var(--blue);
-      }
-      .meta {
-        color: var(--cyan);
-        font-size: 0.9rem;
-        font-weight: 500;
-      }
-      .cols {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-      @media (max-width: 860px) {
-        .cols {
-          grid-template-columns: 1fr;
-        }
-      }
-      ul.clean {
-        margin: 0;
-        padding-left: 1.2rem;
-        color: var(--mu);
-      }
-      ul.clean li {
-        margin: 0.45rem 0;
-      }
-      .band {
-        background: linear-gradient(
-          135deg,
-          rgba(47, 123, 255, 0.2),
-          rgba(10, 18, 36, 0.7)
-        );
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 2.4rem;
-      }
-      form {
-        display: grid;
-        gap: 1rem;
-      }
-      label {
-        font-weight: 600;
-        font-size: 0.92rem;
-        display: block;
-        margin-bottom: 0.3rem;
-      }
-      input,
-      select,
-      textarea {
-        width: 100%;
-        background: rgba(4, 7, 15, 0.7);
-        border: 1px solid var(--line);
-        border-radius: 10px;
-        color: var(--tx);
-        padding: 0.75rem 0.9rem;
-        font: inherit;
-        min-height: 46px;
-      }
-      textarea {
-        min-height: 120px;
-        resize: vertical;
-      }
-      .err {
-        color: #ff8b8b;
-        font-size: 0.85rem;
-        min-height: 1.1em;
-        margin-top: 0.25rem;
-      }
-      input[aria-invalid="true"],
-      textarea[aria-invalid="true"] {
-        border-color: #ff8b8b;
-      }
-      .two {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-      @media (max-width: 600px) {
-        .two {
-          grid-template-columns: 1fr;
-        }
-      }
-      #ok {
-        display: none;
-        border: 1px solid #3ddc97;
-        background: rgba(61, 220, 151, 0.1);
-        padding: 1rem;
-        border-radius: 10px;
-        color: #cdf8e4;
-      }
-      .hp {
-        position: absolute;
-        left: -9999px;
-      }
-      footer {
-        border-top: 1px solid var(--line);
-        padding: 2.2rem 0 calc(2.2rem + env(safe-area-inset-bottom, 0px));
-        color: var(--mu);
-        font-size: 0.92rem;
-      }
-      footer .wrap {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem 2rem;
-        justify-content: space-between;
-        align-items: center;
-      }
-      footer nav {
-        height: auto;
-        gap: 1.1rem;
-        flex-wrap: wrap;
-      }
-      footer a {
-        color: var(--mu);
-      }
-      .rv {
-        opacity: 0;
-        transform: translateY(16px);
-        transition:
-          opacity 0.6s,
-          transform 0.6s;
-      }
-      .rv.in {
-        opacity: 1;
-        transform: none;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation: none !important;
-          transition: none !important;
-          scroll-behavior: auto !important;
-        }
-        .rv {
-          opacity: 1;
-          transform: none;
-        }
-      }
-    
-      /* Larger tap targets for standalone links (accessibility) */
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-        padding: 0 0.25rem;
-      }
-      .links a:not(.btn) {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-      }
-      ul.clean li a {
-        display: inline-block;
-        padding: 0.6rem 0;
-      }
-      footer a {
-        display: inline-block;
-        padding: 0.65rem 0.2rem;
-      }
-    </style>
+      </style>
+    </noscript>
   </head>
+
   <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <!-- Icon set: one stroke weight, one size, drawn rather than typed. -->
+    <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+      <symbol id="i-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h13" />
+        <path d="M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24">
+        <path d="M12 19V6" />
+        <path d="M6 12l6-6 6 6" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="M3.5 7l8.5 6 8.5-6" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.2 2 2 0 0 1 6 3z" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.5.5-.5 1.1-.5 2V21" />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <path d="M8 10.5V17" />
+        <path d="M8 7.5v.01" />
+        <path d="M12 17v-3.5a2 2 0 0 1 4 0V17" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 4v11" />
+        <path d="M7 11l5 5 5-5" />
+        <path d="M5 20h14" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16" />
+        <path d="M4 12h16" />
+        <path d="M4 17h16" />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path d="M6 6l12 12" />
+        <path d="M18 6L6 18" />
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path d="M20 12a8 8 0 0 1-11.9 7A8 8 0 1 1 20 12z" />
+        <path d="M9 11h.01" />
+        <path d="M12.5 11h.01" />
+        <path d="M16 11h.01" />
+      </symbol>
+    </svg>
+
     <header>
       <div class="wrap">
-        <nav aria-label="Main">
-          <a class="brand" href="#home" aria-label="Durgajanesh Devadula, home"
-            >DD<span>.</span></a
+        <a class="skip" href="#main">Skip to content</a>
+        <nav class="nav" aria-label="Main">
+          <a class="brand" href="#home">Durgajanesh Devadula</a>
+          <a
+            class="btn btn-primary resume-compact"
+            href="Durgajanesh_Devadula_Resume.pdf"
+            download="Durgajanesh_Devadula_Resume.pdf"
+            >Résumé</a
           >
           <button
             class="menu"
-            aria-label="Toggle menu"
+            id="menu"
+            type="button"
+            aria-label="Open menu"
             aria-expanded="false"
             aria-controls="links"
           >
-            &#9776;
+            <svg class="icon i-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+            <svg class="icon i-x" aria-hidden="true"><use href="#i-x"></use></svg>
           </button>
           <div class="links" id="links">
-            <a href="#home">Home</a><a href="#about">About</a
-            ><a href="#skills">Skills</a><a href="#experience">Experience</a
-            ><a href="#projects">Projects</a><a href="#education">Education</a
-            ><a href="#contact">Contact</a>
+            <a href="#projects">Work</a>
+            <a href="#about">About</a>
+            <a href="#skills">Stack</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
             <a
-              class="btn p"
+              class="btn"
               href="Durgajanesh_Devadula_Resume.pdf"
               download="Durgajanesh_Devadula_Resume.pdf"
-              >Download Resume</a
             >
+              Résumé
+            </a>
+            <button
+              class="links-action"
+              type="button"
+              id="ask-chat"
+              aria-label="Ask the assistant"
+              aria-expanded="false"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg>
+              <span class="links-action-text">Ask the assistant</span>
+            </button>
           </div>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="hero" id="home">
-        <div class="wrap">
+      <section class="hero" id="home" data-enter>
+        <div class="wrap hero-grid">
           <div>
-            <p class="status">
-              <span class="dot" aria-hidden="true"></span>Available for
-              Freelance &amp; Project-Based Work
+            <p class="status"><span class="dot" aria-hidden="true"></span>Open to freelance and project-based work</p>
+            <h1 class="hero-title">
+              <span class="line"><span>Durgajanesh</span></span>
+              <span class="line"><span>Devadula</span></span>
+            </h1>
+            <p class="hero-role">
+              Web developer and B.Tech <strong>AI &amp; ML</strong> student in Visakhapatnam, India
             </p>
-            <h1>Durgajanesh Devadula</h1>
-            <p class="role">
-              Web Developer | AI &amp; ML Student | Open to Freelance Projects
-            </p>
-            <p
-              style="
-                font: 500 1.15rem &quot;Space Grotesk&quot;;
-                color: var(--tx);
-              "
-            >
-              “Building Real-World Solutions Through Web Development and AI.”
-            </p>
-            <p>
-              I'm interested in building practical web solutions and exploring
-              AI-powered applications. I'm looking to contribute my skills to
-              real-world projects, freelance work, and meaningful
-              collaborations.
+            <p class="lede">
+              I build web applications with C#, .NET and the usual front-end stack, and I work on AI
+              and computer-vision projects alongside my degree. The clearest evidence so far is six
+              months as a web development intern at Rashmitha Information System, building the Mini
+              Supermarket application.
             </p>
             <div class="cta">
-              <a class="btn p" href="#projects">View My Projects</a>
-              <a class="btn" href="#contact">Discuss a Project</a>
-              <a
-                class="btn"
-                href="Durgajanesh_Devadula_Resume.pdf"
-                download="Durgajanesh_Devadula_Resume.pdf"
-                >Download Resume</a
-              >
+              <a class="btn btn-primary" href="#projects">
+                See the work
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a class="btn" href="#contact">Start a conversation</a>
             </div>
           </div>
-          <div class="scene" aria-hidden="true">
-            <div class="cube">
-              <i>C#</i><i>.NET</i><i>JS</i><i>AI</i><i>SQL</i><i>CSS</i>
+
+          <dl class="facts">
+            <div>
+              <dt>Based in</dt>
+              <dd>Visakhapatnam, Andhra Pradesh</dd>
             </div>
+            <div>
+              <dt>Studying</dt>
+              <dd>B.Tech in Artificial Intelligence &amp; Machine&nbsp;Learning</dd>
+            </div>
+            <div>
+              <dt>Experience</dt>
+              <dd>Six-month web development internship</dd>
+            </div>
+            <div>
+              <dt>Everyday stack</dt>
+              <dd>C#, .NET, HTML, CSS, JavaScript, Bootstrap,&nbsp;SQL</dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>Telugu, English</dd>
+            </div>
+            <div>
+              <dt>Availability</dt>
+              <dd>Freelance and project-based work</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="wrap" data-reveal="rise">
+          <div class="section-head">
+            <h2>Selected work</h2>
+            <p>
+              Five projects. One was completed as part of a job, two are still in progress, and the
+              other two are academic and personal builds.
+            </p>
+          </div>
+
+          <article class="work-feature">
+            <div class="work-feature-body">
+              <span class="tag">Completed during the internship</span>
+              <h3>Mini Supermarket</h3>
+              <p>
+                An online supermarket application built with C#, .NET, HTML, CSS, JavaScript and
+                Bootstrap. It is the one project here completed as part of a job, and it is the
+                work I would put first in a conversation.
+              </p>
+              <ul class="chips">
+                <li><span class="chip">C#</span></li>
+                <li><span class="chip">.NET</span></li>
+                <li><span class="chip">HTML</span></li>
+                <li><span class="chip">CSS</span></li>
+                <li><span class="chip">JavaScript</span></li>
+                <li><span class="chip">Bootstrap</span></li>
+              </ul>
+            </div>
+            <div class="work-feature-aside">
+              <span class="tag">Internship details</span>
+              <dl class="spec">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Web development intern</dd>
+                </div>
+                <div>
+                  <dt>Organisation</dt>
+                  <dd>Rashmitha Information System</dd>
+                </div>
+                <div>
+                  <dt>Length</dt>
+                  <dd>Six months</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <div class="project-list">
+            <article class="project">
+              <div class="project-head">
+                <h3>JARVIS AI</h3>
+                <span class="tag">Personal project</span>
+              </div>
+              <div class="project-body">
+                <p>
+                  A system control assistant: an assistant that interacts with and controls system
+                  functions, built to explore how far basic AI and automation ideas go when they are
+                  pointed at a real machine.
+                </p>
+                <ul class="chips">
+                  <li><span class="chip">Artificial intelligence</span></li>
+                  <li><span class="chip">Automation</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-head">
+                <h3>Vehicle Detection</h3>
+                <span class="tag">Academic project</span>
+              </div>
+              <div class="project-body">
+                <p>
+                  A computer-vision project exploring the basic concepts of identifying vehicles.
+                  The detection ideas are the subject here; the product itself is unfinished.
+                </p>
+                <ul class="chips">
+                  <li><span class="chip">Computer vision</span></li>
+                  <li><span class="chip">Artificial intelligence</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-head">
+                <h3>Disaster Detection</h3>
+                <span class="tag tag-active">In progress</span>
+              </div>
+              <div class="project-body">
+                <p>
+                  An ongoing project applying foundational AI and machine-learning concepts to
+                  disaster detection. Still being built, and not yet at a stage I would call
+                  finished.
+                </p>
+                <ul class="chips">
+                  <li><span class="chip">AI</span></li>
+                  <li><span class="chip">Machine learning</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-head">
+                <h3>College Small Business IT Incident Management</h3>
+                <span class="tag tag-active">In progress</span>
+              </div>
+              <div class="project-body">
+                <p>
+                  An AI-assisted system for reporting, tracking and managing the technology-related
+                  incidents of a college small business, from first report through to resolution.
+                </p>
+                <ul class="chips">
+                  <li><span class="chip">AI-assisted</span></li>
+                  <li><span class="chip">Incident tracking</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="statement" aria-label="The stack">
+        <div class="wrap">
+          <div class="statement-panel">
+            <p class="statement-line">
+              C# and .NET on the server. HTML, CSS and JavaScript in the browser. SQL underneath.
+            </p>
           </div>
         </div>
       </section>
 
       <section id="about">
-        <div class="wrap rv">
-          <h2>About me</h2>
-          <div class="cols">
-            <div>
-              <p>
-                I'm a B.Tech Artificial Intelligence and Machine Learning
-                student with a Diploma in Computer Science and Engineering and a
-                completed six-month web development internship. I work with C#,
-                .NET, HTML, CSS, JavaScript and Bootstrap, and I've explored
-                AI-based applications, automation and computer vision through
-                projects.
-              </p>
-              <p>
-                I like learning through practical work and contributing to real
-                project goals, and I'm open to collaborating with clients and
-                teams on freelance and project-based development.
-              </p>
+        <div class="wrap split" data-reveal="fade">
+          <div>
+            <div class="section-head">
+              <h2>About me</h2>
             </div>
-            <ul class="clean">
-              <li>
-                Currently pursuing B.Tech in Artificial Intelligence and Machine
-                Learning
-              </li>
-              <li>Completed a Diploma in Computer Science and Engineering</li>
-              <li>Completed a six-month web development internship</li>
-              <li>
-                Interested in practical development projects and freelance
-                collaborations
-              </li>
-              <li>Exploring AI-based applications and computer vision</li>
-            </ul>
+            <p>
+              I started in web development through a Diploma in Computer Science and Engineering,
+              and the work followed from there: six months as a web development intern at Rashmitha
+              Information System, where I built the Mini Supermarket application using C#, .NET,
+              HTML, CSS, JavaScript and Bootstrap. I am now completing a B.Tech in Artificial
+              Intelligence and Machine Learning at the same institute.
+            </p>
+            <p>
+              The AI side of my work is still foundational: the ideas from my degree applied to
+              real problems, not production models I have run for years. Saying so plainly is
+              better than dressing it up. What I can offer today is someone who learns a stack
+              quickly, builds carefully, and states the limits of what has been tried so far.
+            </p>
+            <p>
+              I am after freelance and project-based work; internship placements are not the goal.
+              If you have something that needs building or fixing, I would like to hear about it.
+            </p>
           </div>
+
+          <aside class="note">
+            <h3>Also</h3>
+            <dl class="facts">
+              <div>
+                <dt>Based in</dt>
+                <dd>Visakhapatnam, Andhra Pradesh, India</dd>
+              </div>
+              <div>
+                <dt>Languages</dt>
+                <dd>Telugu and English</dd>
+              </div>
+              <div>
+                <dt>Qualification</dt>
+                <dd>MS Office Certificate, HP</dd>
+              </div>
+              <div>
+                <dt>Working skills</dt>
+                <dd>Communication, leadership, problem solving, adaptability</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
       <section id="skills">
-        <div class="wrap rv">
-          <h2>Skills and technologies</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>Web development</h3>
-              <div class="chips">
-                <span class="chip">HTML</span><span class="chip">CSS</span
-                ><span class="chip">JavaScript</span
-                ><span class="chip">Bootstrap</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3>Programming and backend</h3>
-              <div class="chips">
-                <span class="chip">C#</span><span class="chip">.NET</span
-                ><span class="chip">SQL</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3>AI and emerging technologies</h3>
-              <div class="chips">
-                <span class="chip">Basic Artificial Intelligence</span
-                ><span class="chip">Machine Learning Concepts</span
-                ><span class="chip">AI-Based Application Development</span
-                ><span class="chip">Basic Computer Vision</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3>Productivity</h3>
-              <div class="chips"><span class="chip">MS Office</span></div>
-            </div>
+        <div class="wrap" data-reveal="rise">
+          <div class="section-head">
+            <h2>The stack I work with</h2>
+            <p>Grouped by the work each part turns up in.</p>
           </div>
+
+          <dl class="ruled">
+            <div class="ruled-row">
+              <dt>Front end</dt>
+              <dd>
+                <ul class="chips">
+                  <li><span class="chip">HTML</span></li>
+                  <li><span class="chip">CSS</span></li>
+                  <li><span class="chip">JavaScript</span></li>
+                  <li><span class="chip">Bootstrap</span></li>
+                </ul>
+              </dd>
+            </div>
+            <div class="ruled-row">
+              <dt>Application development</dt>
+              <dd>
+                <ul class="chips">
+                  <li><span class="chip">C#</span></li>
+                  <li><span class="chip">.NET</span></li>
+                </ul>
+                <p class="ruled-note">The stack behind the Mini Supermarket application.</p>
+              </dd>
+            </div>
+            <div class="ruled-row">
+              <dt>Data</dt>
+              <dd>
+                <ul class="chips">
+                  <li><span class="chip">SQL</span></li>
+                </ul>
+              </dd>
+            </div>
+            <div class="ruled-row">
+              <dt>AI and machine learning</dt>
+              <dd>
+                <ul class="chips">
+                  <li><span class="chip">AI-based application development</span></li>
+                  <li><span class="chip">Machine-learning concepts</span></li>
+                  <li><span class="chip">Computer vision</span></li>
+                </ul>
+                <p class="ruled-note">
+                  Foundation-level work from my degree, applied in the projects above.
+                </p>
+              </dd>
+            </div>
+            <div class="ruled-row">
+              <dt>Tools</dt>
+              <dd>
+                <ul class="chips">
+                  <li><span class="chip">MS Office</span></li>
+                </ul>
+                <p class="ruled-note">Certified by HP.</p>
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section id="experience">
-        <div class="wrap rv">
-          <h2>Experience</h2>
-          <div class="tl">
-            <div class="card">
-              <span class="tag done">Completed</span>
-              <h3>Web Development Intern — Rashmitha Information System</h3>
-              <p class="meta">Six months</p>
-              <p>
-                Worked on the Mini Supermarket project as part of my web
-                development internship. This is part of my background; I'm now
-                looking for freelance and project-based work rather than
-                internships.
-              </p>
-              <div class="chips">
-                <span class="chip">C#</span><span class="chip">.NET</span
-                ><span class="chip">HTML</span><span class="chip">CSS</span
-                ><span class="chip">JavaScript</span
-                ><span class="chip">Bootstrap</span>
-              </div>
-            </div>
+        <div class="wrap" data-reveal="fade">
+          <div class="section-head">
+            <h2>Experience</h2>
+            <p>One role so far, and the work it produced.</p>
           </div>
-        </div>
-      </section>
 
-      <section id="projects">
-        <div class="wrap rv">
-          <h2>Featured projects</h2>
-          <div class="grid">
-            <article class="card">
-              <div class="art">
-                <svg
-                  viewBox="0 0 240 150"
-                  role="img"
-                  aria-label="Glowing AI core with sound waves"
-                >
-                  <g fill="none" stroke="#38d0ff">
-                    <circle cx="120" cy="75" r="48" opacity=".8" />
-                    <circle
-                      cx="120"
-                      cy="75"
-                      r="33"
-                      stroke="#2f7bff"
-                      stroke-width="3"
-                    />
-                    <circle
-                      cx="120"
-                      cy="75"
-                      r="16"
-                      fill="#2f7bff"
-                      fill-opacity=".55"
-                    />
-                    <path
-                      d="M8 75h48l8-22 10 44 10-32 8 10h14M172 75h12l8-16 8 32 6-16h18"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <h3>JARVIS AI — System Control Assistant</h3>
-              <p>
-                An AI-based assistant project exploring interaction with system
-                functions, basic AI concepts and automation.
-              </p>
-              <div class="chips">
-                <span class="chip">AI</span><span class="chip">Automation</span>
-              </div>
-            </article>
-            <article class="card">
-              <div class="art">
-                <svg
-                  viewBox="0 0 240 150"
-                  role="img"
-                  aria-label="Car outline inside a detection box"
-                >
-                  <rect
-                    x="38"
-                    y="34"
-                    width="164"
-                    height="82"
-                    rx="4"
-                    fill="none"
-                    stroke="#3ddc97"
-                    stroke-width="2"
-                    stroke-dasharray="7 4"
-                  />
-                  <path
-                    d="M64 100V86l14-22h84l14 22v14z"
-                    fill="#2f7bff"
-                    fill-opacity=".35"
-                    stroke="#38d0ff"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M88 66l-9 20h82l-9-20z"
-                    fill="none"
-                    stroke="#38d0ff"
-                  />
-                  <circle
-                    cx="92"
-                    cy="102"
-                    r="10"
-                    fill="#04070f"
-                    stroke="#38d0ff"
-                    stroke-width="2"
-                  />
-                  <circle
-                    cx="148"
-                    cy="102"
-                    r="10"
-                    fill="#04070f"
-                    stroke="#38d0ff"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-              <h3>Vehicle Detection</h3>
-              <p>
-                A computer-vision project exploring concepts for identifying
-                vehicles.
-              </p>
-              <div class="chips">
-                <span class="chip">Computer Vision</span
-                ><span class="chip">AI</span>
-              </div>
-            </article>
-            <article class="card">
-              <span class="tag">Ongoing</span>
-              <div class="art">
-                <svg
-                  viewBox="0 0 240 150"
-                  role="img"
-                  aria-label="Mountain terrain with a warning triangle"
-                >
-                  <path
-                    d="M0 130l50-52 32 30 48-62 46 56 24-20 40 48z"
-                    fill="#2f7bff"
-                    fill-opacity=".35"
-                    stroke="#38d0ff"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M120 22l22 38h-44z"
-                    fill="none"
-                    stroke="#ffb74d"
-                    stroke-width="3"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M120 33v14"
-                    stroke="#ffb74d"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <circle cx="120" cy="53" r="2" fill="#ffb74d" />
-                </svg>
-              </div>
-              <h3>Disaster Detection</h3>
-              <p>
-                An ongoing AI-based project applying basic AI and
-                machine-learning concepts to disaster detection.
-              </p>
-              <div class="chips">
-                <span class="chip">AI</span
-                ><span class="chip">Machine Learning</span>
-              </div>
-            </article>
-            <article class="card">
-              <span class="tag">Ongoing</span>
-              <div class="art">
-                <svg
-                  viewBox="0 0 240 150"
-                  role="img"
-                  aria-label="List of incident tickets with status dots"
-                >
-                  <g fill="rgba(47,123,255,.2)" stroke="#38d0ff">
-                    <rect x="40" y="22" width="160" height="28" rx="6" />
-                    <rect x="40" y="61" width="160" height="28" rx="6" />
-                    <rect x="40" y="100" width="160" height="28" rx="6" />
-                  </g>
-                  <circle cx="56" cy="36" r="5" fill="#ff8b8b" />
-                  <circle cx="56" cy="75" r="5" fill="#ffb74d" />
-                  <circle cx="56" cy="114" r="5" fill="#3ddc97" />
-                  <g stroke="#a3b1cc" stroke-width="3" stroke-linecap="round">
-                    <path d="M72 36h90M72 75h70M72 114h100" />
-                  </g>
-                </svg>
-              </div>
-              <h3>College Small Business IT Incident Management</h3>
-              <p>
-                An ongoing AI-assisted project focused on reporting, tracking
-                and managing technology-related incidents.
-              </p>
-              <div class="chips"><span class="chip">AI-assisted</span></div>
-            </article>
-            <article class="card">
-              <span class="tag done">Completed during internship</span>
-              <div class="art">
-                <svg
-                  viewBox="0 0 240 150"
-                  role="img"
-                  aria-label="Shopping cart with products"
-                >
-                  <path
-                    d="M62 42h22l16 56h72l14-40H92"
-                    fill="#2f7bff"
-                    fill-opacity=".3"
-                    stroke="#38d0ff"
-                    stroke-width="3"
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                  />
-                  <circle
-                    cx="108"
-                    cy="114"
-                    r="8"
-                    fill="#04070f"
-                    stroke="#38d0ff"
-                    stroke-width="3"
-                  />
-                  <circle
-                    cx="162"
-                    cy="114"
-                    r="8"
-                    fill="#04070f"
-                    stroke="#38d0ff"
-                    stroke-width="3"
-                  />
-                  <rect
-                    x="112"
-                    y="60"
-                    width="18"
-                    height="24"
-                    rx="3"
-                    fill="#3ddc97"
-                    fill-opacity=".6"
-                  />
-                  <rect
-                    x="136"
-                    y="68"
-                    width="18"
-                    height="16"
-                    rx="3"
-                    fill="#38d0ff"
-                    fill-opacity=".6"
-                  />
-                </svg>
-              </div>
-              <h3>Mini Supermarket</h3>
-              <p>A project completed during my web development internship.</p>
-              <div class="chips">
-                <span class="chip">C#</span><span class="chip">.NET</span
-                ><span class="chip">HTML</span><span class="chip">CSS</span
-                ><span class="chip">JavaScript</span
-                ><span class="chip">Bootstrap</span>
-              </div>
-            </article>
-          </div>
-          <p style="margin-top: 1.6rem; color: var(--tx); font-weight: 500">
-            Have a project in mind? Let's discuss how I can contribute.
-            <a href="#contact">Start a conversation</a>
-          </p>
+          <dl class="ruled">
+            <div class="ruled-row">
+              <dt>
+                Web Development Intern
+                <span class="tag">Completed</span>
+              </dt>
+              <dd>
+                <p class="ruled-note ruled-note-tight">Rashmitha Information System</p>
+                <p>
+                  Worked on the Mini Supermarket application for the length of a six-month
+                  internship, building it with C# and .NET alongside an HTML, CSS, JavaScript and
+                  Bootstrap front end.
+                </p>
+                <ul class="chips">
+                  <li><span class="chip">C#</span></li>
+                  <li><span class="chip">.NET</span></li>
+                  <li><span class="chip">HTML</span></li>
+                  <li><span class="chip">CSS</span></li>
+                  <li><span class="chip">JavaScript</span></li>
+                  <li><span class="chip">Bootstrap</span></li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section id="education">
-        <div class="wrap rv">
-          <h2>Education</h2>
-          <div class="tl">
-            <div class="card">
-              <h3>B.Tech — Artificial Intelligence and Machine Learning</h3>
-              <p class="meta">Currently pursuing · three-year program</p>
-              <p>Visakha Institute of Engineering and Technology, Narava</p>
-            </div>
-            <div class="card">
-              <h3>Diploma — Computer Science and Engineering</h3>
-              <p class="meta">2022–2025 · 80%</p>
-              <p>Visakha Institute of Engineering and Technology, Narava</p>
-            </div>
-            <div class="card">
-              <h3>ITI — Wood Work Technician (NSQF)</h3>
-              <p class="meta">2024</p>
-              <p>Sri Ramu Memorial ITI</p>
-            </div>
-            <div class="card">
-              <h3>SSC</h3>
-              <p class="meta">2021–2022 · 75%</p>
-              <p>Z.P.H. High School, Narava</p>
-            </div>
+        <div class="wrap" data-reveal="rise">
+          <div class="section-head">
+            <h2>Education and certification</h2>
+            <p>Where the study and the training behind the work came from.</p>
           </div>
-          <div class="grid" style="margin-top: 2rem">
-            <div class="card">
-              <h3>Certification</h3>
-              <p>MS Office Certificate — HP</p>
+
+          <dl class="ruled">
+            <div class="ruled-row">
+              <dt>B.Tech, Artificial Intelligence and Machine Learning</dt>
+              <dd>
+                <p class="ruled-note ruled-note-tight">Currently pursuing · three-year programme</p>
+                <p>Visakha Institute of Engineering and Technology, Narava.</p>
+              </dd>
             </div>
-            <div class="card">
-              <h3>Soft skills</h3>
-              <div class="chips">
-                <span class="chip">Communication</span
-                ><span class="chip">Leadership</span
-                ><span class="chip">Problem Solving</span
-                ><span class="chip">Adaptability</span>
-              </div>
+            <div class="ruled-row">
+              <dt>Diploma, Computer Science and Engineering</dt>
+              <dd>
+                <p class="ruled-note ruled-note-tight">2022–2025 · 80%</p>
+                <p>Visakha Institute of Engineering and Technology, Narava.</p>
+              </dd>
             </div>
-          </div>
+            <div class="ruled-row">
+              <dt>ITI, Wood Work Technician (NSQF)</dt>
+              <dd>
+                <p class="ruled-note ruled-note-tight">2024</p>
+                <p>Sri Ramu Memorial ITI.</p>
+              </dd>
+            </div>
+            <div class="ruled-row">
+              <dt>SSC</dt>
+              <dd>
+                <p class="ruled-note ruled-note-tight">2021–2022 · 75%</p>
+                <p>Z.P.H. High School, Narava.</p>
+              </dd>
+            </div>
+            <div class="ruled-row">
+              <dt>Certification</dt>
+              <dd>
+                <p class="ruled-note ruled-note-tight">MS Office</p>
+                <p>MS Office Certificate, HP.</p>
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section id="collab">
-        <div class="wrap rv">
-          <div class="band">
-            <h2>Have a Project in Mind?</h2>
-            <p>
-              I'm interested in working on real-world projects, freelance
-              development, and collaborative technical work. If you have an
-              idea, a website to build, or a development task that needs
-              attention, I'd be happy to discuss the requirements and explore
-              how I can contribute.
-            </p>
-            <ul class="clean">
-              <li>
-                Responsive website development using HTML, CSS, JavaScript and
-                Bootstrap
-              </li>
-              <li>Web development tasks involving C# and .NET</li>
-              <li>Basic database-related work using SQL</li>
-              <li>
-                AI and computer-vision project collaboration within my current
-                skills
-              </li>
-              <li>Small-business or student-project development assistance</li>
-            </ul>
-            <p style="margin-top: 1rem">
-              I'm looking for actual project work and freelance opportunities,
-              not internship placements.
-            </p>
-            <a class="btn p" href="#contact-form">Discuss Your Project</a>
+        <div class="wrap" data-reveal="fade">
+          <div class="section-head">
+            <h2>What I can take on</h2>
+            <p>The kind of work I am set up to do well.</p>
           </div>
+
+          <ul class="services">
+            <li>Responsive websites and web front ends built with HTML, CSS, JavaScript and Bootstrap.</li>
+            <li>Web application work in C# and .NET.</li>
+            <li>Basic database work with SQL.</li>
+            <li>
+              AI and computer-vision projects within my current level: assistants, detection
+              prototypes and automation.
+            </li>
+            <li>Small-business and student-project development.</li>
+          </ul>
+
+          <p class="service-note">
+            Scope, budget and timing are settled through the enquiry form below — including telling
+            you when a job sits outside what I can do well.
+          </p>
         </div>
       </section>
 
       <section id="contact">
-        <div class="wrap rv">
-          <h2>Let's Work on Something Real.</h2>
-          <p>
-            If you have a freelance opportunity, a real-world project, or an
-            idea you'd like to discuss, feel free to reach out. Share a few
-            details about your project, and we can discuss the requirements and
-            next steps.
-          </p>
-          <div class="cols" style="margin-top: 1.5rem">
-            <div>
-              <ul class="clean" style="list-style: none; padding: 0">
-                <li>
-                  <a href="mailto:janeshdevadula8@gmail.com"
-                    >janeshdevadula8@gmail.com</a
-                  >
-                </li>
-                <li><a href="tel:+916281514862">6281514862</a></li>
-                <li>Visakhapatnam, Andhra Pradesh, India</li>
-                <li>
-                  <a
-                    href="https://github.com/devadula/janesh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >GitHub</a
-                  >
-                  ·
-                  <a
-                    href="https://www.linkedin.com/in/janesh-devadula-b9b70a42a"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >LinkedIn</a
-                  >
-                </li>
-              </ul>
-              <p style="margin-top: 1.2rem">
-                <a
-                  class="btn"
-                  href="Durgajanesh_Devadula_Resume.pdf"
-                  download="Durgajanesh_Devadula_Resume.pdf"
-                  >Download Resume</a
-                >
+        <div class="wrap contact-grid" data-reveal="rise">
+          <div>
+            <div class="section-head">
+              <h2>Contact</h2>
+              <p>
+                Tell me what you are trying to build and I will say whether it is something I can
+                take on.
               </p>
             </div>
-            <form id="contact-form" novalidate aria-label="Project inquiry">
-              <div class="hp" aria-hidden="true">
-                <label
-                  >Leave empty<input id="hp" tabindex="-1" autocomplete="off"
-                /></label>
-              </div>
-              <div class="two">
-                <div>
-                  <label for="n">Your name</label
-                  ><input id="n" autocomplete="name" required />
-                  <div class="err" id="en"></div>
-                </div>
-                <div>
-                  <label for="e">Your email</label
-                  ><input id="e" type="email" autocomplete="email" required />
-                  <div class="err" id="ee"></div>
-                </div>
-              </div>
-              <div>
-                <label for="s">Subject</label
-                ><input id="s" required maxlength="120" />
-                <div class="err" id="es"></div>
-              </div>
-              <div>
-                <label for="t">Inquiry type</label
-                ><select id="t">
-                  <option>Freelance Project</option>
-                  <option>Website Development</option>
-                  <option>AI/ML Project</option>
-                  <option>Collaboration</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="d">Project description</label
-                ><textarea id="d" required></textarea>
-                <div class="err" id="ed"></div>
-              </div>
-              <div class="two">
-                <div>
-                  <label for="b">Budget or project scope (optional)</label
-                  ><input id="b" />
-                </div>
-                <div>
-                  <label for="tl">Preferred timeline (optional)</label
-                  ><input id="tl" />
-                </div>
-              </div>
-              <button class="btn p" type="submit" id="sb">Send</button>
-              <div id="ok" role="status" aria-live="polite"></div>
-            </form>
+
+            <ul class="contact-list">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                <a href="mailto:janeshdevadula8@gmail.com">janeshdevadula8@gmail.com</a>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+                <a href="tel:+916281514862">62815 14862</a>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+                <span>Visakhapatnam, Andhra Pradesh, India</span>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                <a href="https://github.com/devadula/janesh" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                <a href="https://www.linkedin.com/in/janesh-devadula-b9b70a42a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+            </ul>
+
+            <p>
+              <a class="btn" href="Durgajanesh_Devadula_Resume.pdf" download="Durgajanesh_Devadula_Resume.pdf">
+                <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+                Résumé (PDF)
+              </a>
+            </p>
           </div>
+
+          <form id="contact-form" novalidate aria-label="Project enquiry">
+            <div class="hp" aria-hidden="true">
+              <label>Leave empty<input id="hp" tabindex="-1" autocomplete="off" /></label>
+            </div>
+
+            <div class="two">
+              <div class="field">
+                <label for="n">Your name</label>
+                <input id="n" name="name" autocomplete="name" required />
+                <div class="err" id="en"></div>
+              </div>
+              <div class="field">
+                <label for="e">Your email</label>
+                <input id="e" name="email" type="email" autocomplete="email" required />
+                <div class="err" id="ee"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="s">Subject</label>
+              <input id="s" name="subject" required maxlength="120" />
+              <div class="err" id="es"></div>
+            </div>
+
+            <div class="field">
+              <label for="t">Inquiry type</label>
+              <select id="t" name="type">
+                <option>Freelance Project</option>
+                <option>Website Development</option>
+                <option>AI/ML Project</option>
+                <option>Collaboration</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="d">Project description</label>
+              <textarea id="d" name="message" required></textarea>
+              <div class="err" id="ed"></div>
+            </div>
+
+            <div class="two">
+              <div class="field">
+                <label for="b">Budget or scope <span class="optional">(optional)</span></label>
+                <input id="b" name="budget" maxlength="120" />
+              </div>
+              <div class="field">
+                <label for="tl">Timeline <span class="optional">(optional)</span></label>
+                <input id="tl" name="timeline" maxlength="120" />
+              </div>
+            </div>
+
+            <div>
+              <button class="btn btn-primary" type="submit" id="sb">Send enquiry</button>
+            </div>
+            <div id="ok" class="form-status" role="status" aria-live="polite"></div>
+          </form>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="wrap">
+      <div class="wrap footer-row">
         <div>© <span id="yr"></span> Durgajanesh Devadula</div>
-        <nav aria-label="Footer">
-          <a href="#about">About</a><a href="#projects">Projects</a
-          ><a href="#education">Education</a><a href="#contact">Contact</a
-          ><a href="mailto:janeshdevadula8@gmail.com">Email</a
-          ><a
-            href="https://github.com/devadula/janesh"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          ><a
-            href="https://www.linkedin.com/in/janesh-devadula-b9b70a42a"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#projects">Work</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+          <a href="mailto:janeshdevadula8@gmail.com">Email</a>
+          <a href="https://github.com/devadula/janesh" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/janesh-devadula-b9b70a42a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </nav>
-        <a href="#home">Back to top</a>
+        <a class="back-to-top" href="#home" aria-label="Back to top">
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+        </a>
       </div>
     </footer>
 
     <script src="site.js" defer></script>
+
     <button
       class="chat-fab"
       id="cf"
       type="button"
-      aria-label="Chat with the portfolio assistant"
-      title="Ask about my work"
+      aria-label="Open the portfolio assistant"
+      title="Ask about the work"
       aria-expanded="false"
       aria-controls="chat"
     >
-      <svg
-        class="i-chat"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z" />
-        <path d="M8.5 11h.01M12 11h.01M15.5 11h.01" stroke-width="2.6" /></svg
-      ><svg
-        class="i-x"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.2"
-        stroke-linecap="round"
-        aria-hidden="true"
-      >
-        <path d="M6 6l12 12M18 6L6 18" />
-      </svg>
+      <svg class="icon i-chat" aria-hidden="true"><use href="#i-chat"></use></svg>
+      <svg class="icon i-x" aria-hidden="true"><use href="#i-x"></use></svg>
     </button>
+
     <div class="chat" id="chat" role="dialog" aria-label="Portfolio assistant">
       <div class="chat-h">
-        <span style="display: flex; align-items: center; gap: 0.55rem"
-          ><span class="dot" aria-hidden="true"></span
-          ><span
-            >Portfolio assistant<small
-              style="
-                display: block;
-                font:
-                  400 0.72rem Inter,
-                  sans-serif;
-                color: var(--mu);
-              "
-              >AI assistant · Online</small
-            ></span
-          ></span
-        ><span
-          ><button
-            id="cc"
-            aria-label="Clear chat"
-            title="Clear chat"
-            style="font-size: 0.8rem; width: auto; padding: 0 0.5rem"
-          >
-            Clear</button
-          ><button id="cx" aria-label="Close chat">&times;</button></span
-        >
+        <span class="chat-title">
+          <span class="dot" aria-hidden="true"></span>
+          Portfolio assistant
+        </span>
+        <span>
+          <button id="cc" type="button">Clear</button>
+          <button id="cx" type="button" aria-label="Close assistant">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </span>
       </div>
       <div class="chat-log" id="cl" aria-live="polite"></div>
       <div class="sugg" id="cs">
-        <button>Who is this developer?</button
-        ><button>What are the technical skills?</button
-        ><button>Show me the latest projects.</button
-        ><button>What technologies does he use?</button
-        ><button>Tell me about his experience.</button
-        ><button>How can I contact him?</button>
+        <button type="button">Who is Durgajanesh?</button>
+        <button type="button">What are the main technical skills?</button>
+        <button type="button">Which projects are listed here?</button>
+        <button type="button">What did the internship involve?</button>
+        <button type="button">What is the education background?</button>
+        <button type="button">How do I get in touch?</button>
       </div>
       <form id="cfm">
-        <label class="hp" for="ci">Your question</label
-        ><textarea
-          id="ci"
-          rows="1"
-          placeholder="Ask a question…"
-          maxlength="500"
-          style="min-height: 44px; max-height: 110px"
-        ></textarea
-        ><button class="btn p" type="submit" id="cb">Send</button>
+        <label class="chat-label" for="ci">Your question</label>
+        <textarea id="ci" rows="1" maxlength="500"></textarea>
+        <button class="btn btn-primary" type="submit" id="cb">Send</button>
       </form>
     </div>
     <script src="chat-widget.js" defer></script>

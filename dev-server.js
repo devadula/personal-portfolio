@@ -29,6 +29,8 @@ const STATIC = {
   "/index.html": ["index.html", "text/html; charset=utf-8"],
   "/site.js": ["site.js", "text/javascript; charset=utf-8"],
   "/chat-widget.js": ["chat-widget.js", "text/javascript; charset=utf-8"],
+  "/styles.css": ["styles.css", "text/css; charset=utf-8"],
+  "/favicon.svg": ["favicon.svg", "image/svg+xml"],
   "/robots.txt": ["robots.txt", "text/plain; charset=utf-8"],
   "/sitemap.xml": ["sitemap.xml", "application/xml; charset=utf-8"],
   "/og-image.png": ["og-image.png", "image/png"],

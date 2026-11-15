@@ -23,6 +23,10 @@ colors:
   ok-wash: "#e6f0ea"
   err: "#a33229"
   err-wash: "#f7eae8"
+  # Résumé sheet — the printed document, not the site
+  resume-teal: "#206b5e"
+  resume-ink: "#1a1a1a"
+  resume-body: "#5e5e5e"
 typography:
   scale:
     "12": "0.75rem"       # meta, labels
@@ -68,6 +72,16 @@ typography:
     fontFamily: "'Segoe UI', Tahoma, Geneva, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 400
+  resume-display:
+    fontFamily: "PT Serif, Georgia, serif"
+    fontSize: "2rem"
+    fontWeight: 700
+    lineHeight: 1.1
+  resume-body:
+    fontFamily: "Source Sans 3, Segoe UI, Arial, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
   none: "0"
   sm: "4px"
@@ -174,6 +188,15 @@ validation states and never as decoration.
 - **Line** (`#dedcd4`): default hairline. **Line-strong** (`#c7c5bb`): structural dividers, input
   borders, active borders.
 
+### The résumé sheet
+
+The downloadable résumé is a document you hand to someone else, not a screen of the site, so it
+carries its own small system and is printed, not read on the web.
+
+- **Teal** (`resume-teal`): the résumé's sidebar ground — the colour the original résumé used, kept
+  so the document still looks like his.
+- **Sheet ink** (`resume-ink`) and **sheet body** (`resume-body`): the résumé's text pair, on white.
+
 ### Named Rules
 
 - **One accent.** Prussian is the only colour that carries meaning. If something is coloured, it
@@ -196,6 +219,13 @@ validation states and never as decoration.
 - **Measure:** body copy is capped at 58ch of the text face — about 78 characters on the line.
   Display type is capped at 4.25rem.
 - **Tracking:** display −0.015em, headlines −0.01em, body 0. Never below −0.04em.
+
+### The résumé sheet
+
+The printed résumé has its own two families, because it is a document rather than a screen:
+**PT Serif** for the name and the section heads, and **Source Sans 3** for everything else —
+entries, dates, and body text. It is set on A4 with a 63mm sidebar, 9pt body, and a single
+measure; it is never scaled down to a screen.
 
 ### Named Rules
 
@@ -285,6 +315,9 @@ text. No coloured chips except the one active-state tag.
   between rows, no repeated boxes. This is deliberately not a four-card grid.
 - **Fact table:** the hero's "at a glance" panel is a definition list with hairline row dividers.
 - **Skills:** a ruled two-column table of groups and technologies, not a grid of icon cards.
+- **Education:** a ruled three-column table — qualification, the dates or status of that entry, and
+  where it was done — so the line reads across the page instead of stopping a third of the way in.
+  The certification row uses the same columns, one certificate per line.
 - **Statement panel:** one inset ink panel carrying one sentence, set in the display face, with the
   accent as a short rule above it. It sits inside the container rather than running edge to edge.
 

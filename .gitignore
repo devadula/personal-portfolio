@@ -9,7 +9,7 @@ npm-debug.log*
 
 # Impeccable design tooling (installed locally, not part of the published site).
 # Reinstall with: node .minimax/install-impeccable.mjs <path-to>/impeccable/plugin/skills/impeccable
-.minimax/skills/
+.minimax/
 .impeccable/
 
 # Local audit tools and their leftovers.

@@ -74,13 +74,13 @@ or in a dark room.
   (in progress), College Small Business IT Incident Management (in progress), Mini Supermarket
   (completed during the internship).
 - One internship: Web Development Intern, Rashmitha Information System, six months, completed.
-- Stack: C#, .NET, HTML, CSS, JavaScript, Bootstrap, SQL, foundational AI/ML and computer vision,
-  MS Office.
+- Stack: C#, .NET, HTML, CSS, JavaScript, Bootstrap, SQL, React, Angular, Tailwind CSS, Node.js,
+  Python, FastAPI, PostgreSQL, foundational AI/ML and computer vision, MS Office.
 - Education: B.Tech AI & ML (in progress), Diploma CSE (2022–2025, 80%), ITI Wood Work Technician
   (NSQF, 2024), SSC (2021–2022, 75%) — all at Visakha Institute of Engineering and Technology,
   Narava / Sri Ramu Memorial ITI / Z.P.H. High School.
 - Languages: Telugu, English.
-- Certification: MS Office Certificate (HP).
+- Certification: MS Office Certificate (HP); Certificate in data analytics with Python (NPTEL, 2025).
 - Contact: email, phone, Visakhapatnam (Andhra Pradesh, India), GitHub, LinkedIn.
 - No project screenshots, no client logos, no testimonials, no photographs of the person.
 

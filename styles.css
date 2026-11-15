@@ -1004,6 +1004,36 @@ header .wrap {
   margin-top: -0.35rem;
 }
 
+/* A second entry in the same row, set apart from the one above it. */
+.ruled-note-separated {
+  margin-top: 1rem;
+}
+
+/* Education: the detail splits into a note column and a value column, so the
+   line of study sits beside the dates it belongs to and the row fills the
+   width instead of leaving the right half empty. The note column keeps its
+   size down to a narrow phone, where the two columns stack. */
+.ruled-split .ruled-row dd {
+  display: grid;
+  grid-template-columns: 20rem minmax(0, 1fr);
+  gap: 0 32px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .ruled-split .ruled-row dd {
+    grid-template-columns: minmax(11rem, 20rem) minmax(0, 1fr);
+    gap: 0 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ruled-split .ruled-row dd {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}
+
 @media (max-width: 780px) {
   .ruled-row {
     grid-template-columns: 1fr;

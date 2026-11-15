@@ -19,7 +19,7 @@ const PATTERNS = [
   [/AIza[0-9A-Za-z_-]{20,}/, "Google API key"],
   [/AQ\.[0-9A-Za-z_-]{20,}/, "Google AI Studio key"],
   [/\bre_[0-9A-Za-z]{20,}/, "Resend API key"],
-  [/\bsk-[0-9A-Za-z]{20,}/, "secret key (sk-...)"],
+  [/\bsk-[0-9A-Za-z-]{20,}/, "secret key (sk-...)"],
   [/-----BEGIN [A-Z ]*PRIVATE KEY-----/, "private key"],
 ];
 

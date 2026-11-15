@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Durgajanesh Devadula — Résumé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* One A4 page. The sidebar carries the identity and the skills; the
+         main column carries the record. Same layout as the original résumé,
+         updated with the current stack and certifications. */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --green: #206b5e;
+        --body: #5e5e5e;
+        --strong: #1a1a1a;
+        --sans: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+        --serif: "PT Serif", Georgia, serif;
+      }
+
+      body {
+        width: 210mm;
+        height: 297mm;
+        background: #fff;
+        font-family: var(--sans);
+        color: var(--body);
+        font-size: 9pt;
+        line-height: 1.5;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        display: flex;
+        width: 210mm;
+        min-height: 297mm;
+      }
+
+      /* --- Sidebar -------------------------------------------------------- */
+      .side {
+        width: 63mm;
+        flex: none;
+        background: var(--green);
+        color: #fff;
+        padding: 8mm 6mm 0 6mm;
+      }
+
+      .name {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 25pt;
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+      }
+
+      .role {
+        margin-top: 2.5mm;
+        font-size: 7.6pt;
+        font-weight: 600;
+        line-height: 1.45;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        opacity: 0.95;
+      }
+
+      .side-block {
+        margin-top: 7mm;
+      }
+
+      .side-block h2 {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 11pt;
+        padding-bottom: 1mm;
+        border-bottom: 0.4pt solid rgba(255, 255, 255, 0.55);
+      }
+
+      .side-block ul {
+        list-style: none;
+        margin-top: 2mm;
+      }
+
+      .side-block li {
+        font-size: 9pt;
+        line-height: 1.62;
+      }
+
+      /* --- Main column ---------------------------------------------------- */
+      .main {
+        flex: 1;
+        padding: 8mm 7mm 0 7mm;
+      }
+
+      .block {
+        margin-bottom: 5.5mm;
+      }
+
+      .block h2 {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 11.4pt;
+        color: var(--green);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .block p {
+        font-size: 9pt;
+        line-height: 1.52;
+      }
+
+      .entry {
+        margin-top: 1.6mm;
+      }
+
+      .entry h3 {
+        font-size: 9.2pt;
+        font-weight: 700;
+        color: var(--strong);
+      }
+
+      .entry p {
+        font-size: 9pt;
+        line-height: 1.52;
+      }
+
+      .entry .soft {
+        margin-top: 0.4mm;
+      }
+
+      .summary {
+        margin-top: 1.6mm;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="side">
+        <h1 class="name">Durgajanesh<br />Devadula</h1>
+        <p class="role">B.Tech Student, Artificial Intelligence and Machine Learning</p>
+
+        <section class="side-block">
+          <h2>Details</h2>
+          <ul>
+            <li>Visakhapatnam, Andhra Pradesh, India</li>
+            <li>6281514862</li>
+            <li>janeshdevadula8@gmail.com</li>
+          </ul>
+        </section>
+
+        <section class="side-block">
+          <h2>Technical and AI Skills</h2>
+          <ul>
+            <li>C#</li>
+            <li>.NET</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Tailwind CSS</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>FastAPI</li>
+            <li>SQL</li>
+            <li>PostgreSQL</li>
+            <li>Basic Artificial Intelligence</li>
+            <li>Machine Learning Concepts</li>
+            <li>AI-Based Application Development</li>
+            <li>Basic Computer Vision</li>
+            <li>MS Office</li>
+          </ul>
+        </section>
+
+        <section class="side-block">
+          <h2>Soft Skills</h2>
+          <ul>
+            <li>Communication</li>
+            <li>Leadership</li>
+            <li>Problem Solving</li>
+            <li>Adaptability</li>
+          </ul>
+        </section>
+
+        <section class="side-block">
+          <h2>Languages</h2>
+          <ul>
+            <li>Telugu</li>
+            <li>English</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="block">
+          <h2>Professional Summary</h2>
+          <p class="summary">
+            B.Tech AI and ML student with a Diploma in Computer Science and Engineering and hands-on
+            experience in web development using C#, .NET, HTML, CSS, JavaScript and Bootstrap. Built
+            AI-based projects in system automation and computer vision, and completed a 6-month Web
+            Development Internship.
+          </p>
+        </section>
+
+        <section class="block">
+          <h2>Education</h2>
+
+          <div class="entry">
+            <h3>B.Tech, Artificial Intelligence and Machine Learning (3-Year Program)</h3>
+            <p>Visakha Institute of Engineering and Technology, Narava | Currently Pursuing</p>
+          </div>
+          <div class="entry">
+            <h3>Diploma, Computer Science and Engineering</h3>
+            <p>Visakha Institute of Engineering and Technology, Narava | 2022 - 2025 | 80%</p>
+          </div>
+          <div class="entry">
+            <h3>ITI, Wood Work Technician (NSQF)</h3>
+            <p>Sri Ramu Memorial ITI | 2024</p>
+          </div>
+          <div class="entry">
+            <h3>SSC</h3>
+            <p>Z.P.H. High School, Narava | 2021 - 2022 | 75%</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>Internship</h2>
+          <div class="entry">
+            <h3>Web Development Intern, Rashmitha Information System | 6 months (Completed)</h3>
+            <p class="soft">
+              Completed a Mini Supermarket project using C#, .NET, HTML, CSS, JavaScript and
+              Bootstrap.
+            </p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>AI-Based Projects</h2>
+          <div class="entry">
+            <h3>JARVIS AI, System Control Assistant</h3>
+            <p class="soft">
+              AI-based assistant that interacts with and controls system functions using basic AI and
+              automation concepts.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>Vehicle Detection</h3>
+            <p class="soft">
+              Vehicle detection project exploring basic computer vision concepts for identifying
+              vehicles.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>Disaster Detection (Ongoing)</h3>
+            <p class="soft">
+              Developing an AI-based disaster detection project applying basic AI/ML concepts.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>College Small Business IT Incident Management (Ongoing)</h3>
+            <p class="soft">
+              Developing an AI-assisted project for reporting, tracking and managing
+              technology-related incidents.
+            </p>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>Certifications</h2>
+          <div class="entry">
+            <h3>MS Office Certificate, HP</h3>
+          </div>
+          <div class="entry">
+            <h3>Data Analytics with Python</h3>
+            <p class="soft">NPTEL | 2025</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

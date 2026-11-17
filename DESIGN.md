@@ -314,8 +314,14 @@ text. No coloured chips except the one active-state tag.
 - **Project feature with screens:** a project that carries its own screenshots runs the full width,
   so the images keep their detail, and its spec becomes a four-column strip under the body.
 - **Project screens:** real captures of the owner's own builds, framed by a hairline border and the
-  card radius, each with a caption that says what the screen is. The application's own chrome is
-  cropped off — the site's frame is the frame — and any local path is removed.
+  card radius, described by their alt text rather than by a caption line under the image. The
+  application's own chrome is cropped off — the site's frame is the frame — and any local path is
+  removed.
+- **JARVIS capture:** the open-source interface is used as it is, with the name run in the subtitle
+  redrawn as the owner's own so the screen does not carry another person's name. The capture is
+  graded to the same saturation and lightness as the traffic screens, so the three read as one set.
+  The interface design is credited to the open-source JARVIS project by Fatihmakes in one line in
+  the footer, not under the image.
 - **Project list:** the four AI/ML projects are a ruled list — one row per project, hairline
   between rows, no repeated boxes. This is deliberately not a four-card grid.
 - **Fact table:** the hero's "at a glance" panel is a definition list with hairline row dividers.

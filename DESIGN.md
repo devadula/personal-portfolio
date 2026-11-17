@@ -311,6 +311,11 @@ text. No coloured chips except the one active-state tag.
 - **Project feature:** the completed internship project gets a wide bordered panel; the washed aside
   is a spec table — role, organisation and length as label/value rows across the full width — not a
   short list in a wide box.
+- **Project feature with screens:** a project that carries its own screenshots runs the full width,
+  so the images keep their detail, and its spec becomes a four-column strip under the body.
+- **Project screens:** real captures of the owner's own builds, framed by a hairline border and the
+  card radius, each with a caption that says what the screen is. The application's own chrome is
+  cropped off — the site's frame is the frame — and any local path is removed.
 - **Project list:** the four AI/ML projects are a ruled list — one row per project, hairline
   between rows, no repeated boxes. This is deliberately not a four-card grid.
 - **Fact table:** the hero's "at a glance" panel is a definition list with hairline row dividers.

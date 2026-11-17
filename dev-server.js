@@ -36,6 +36,12 @@ const STATIC = {
   "/og-image.png": ["og-image.png", "image/png"],
   "/Durgajanesh_Devadula_Resume.pdf": ["Durgajanesh_Devadula_Resume.pdf", "application/pdf"],
 };
+
+// The project screenshots, each in two cuts: the phone takes the small one.
+for (const name of ["jarvis", "traffic-dashboard", "traffic-architecture"]) {
+  STATIC[`/images/${name}.jpg`] = [`images/${name}.jpg`, "image/jpeg"];
+  STATIC[`/images/${name}-800.jpg`] = [`images/${name}-800.jpg`, "image/jpeg"];
+}
 const API = { "/api/chat": "api/chat.js", "/api/contact": "api/contact.js", "/api/health": "api/health.js" };
 
 // Same security headers as production (from vercel.json), so problems show up locally.

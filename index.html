@@ -287,8 +287,8 @@
           <div class="section-head">
             <h2>Selected work</h2>
             <p>
-              Five projects. One was completed as part of a job, two are still in progress, and the
-              other two are academic and personal builds.
+              Six projects. One was completed as part of a job, one is a personal system of my own,
+              two are still in progress, and the other two are academic and personal builds.
             </p>
           </div>
 
@@ -329,22 +329,102 @@
             </div>
           </article>
 
+          <article class="work-feature work-feature--media">
+            <div class="work-feature-body">
+              <span class="tag">Personal build</span>
+              <h3>AI Smart Traffic Control</h3>
+              <p>
+                A control centre for four-way junctions: YOLO11 detection with ByteTrack identity,
+                quadrant-based direction assignment, live density scoring, and a two-phase adaptive
+                signal controller that grants green by priority with fairness overrides. A FastAPI
+                backend carries the state; the dashboard above is the face of it.
+              </p>
+              <ul class="chips">
+                <li><span class="chip">Python</span></li>
+                <li><span class="chip">YOLO11</span></li>
+                <li><span class="chip">ByteTrack</span></li>
+                <li><span class="chip">FastAPI</span></li>
+              </ul>
+
+              <figure class="shot">
+                <img
+                  src="images/traffic-dashboard.jpg"
+                  srcset="images/traffic-dashboard-800.jpg 800w, images/traffic-dashboard.jpg 1400w"
+                  sizes="(max-width: 1280px) calc(100vw - 48px), 1240px"
+                  width="1400"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                  alt="The traffic control dashboard: the project title, camera source controls, and live tiles for total vehicles, junction density, signal phase and green countdown."
+                />
+              </figure>
+
+              <figure class="shot">
+                <img
+                  src="images/traffic-architecture.jpg"
+                  srcset="images/traffic-architecture-800.jpg 800w, images/traffic-architecture.jpg 1400w"
+                  sizes="(max-width: 1280px) calc(100vw - 48px), 1240px"
+                  width="1400"
+                  height="828"
+                  loading="lazy"
+                  decoding="async"
+                  alt="The architecture panel of the traffic system: seven numbered stages from frame acquisition to visualisation, and a diagram running from camera through YOLO11 and ByteTrack, quadrants and density, to the signal controller and the dashboard."
+                />
+              </figure>
+            </div>
+            <div class="work-feature-aside">
+              <span class="tag">Project details</span>
+              <dl class="spec">
+                <div>
+                  <dt>Detector</dt>
+                  <dd>YOLO11n at 640px</dd>
+                </div>
+                <div>
+                  <dt>Tracker</dt>
+                  <dd>ByteTrack at 0.35</dd>
+                </div>
+                <div>
+                  <dt>Backend</dt>
+                  <dd>FastAPI, 10 fps target</dd>
+                </div>
+                <div>
+                  <dt>Output</dt>
+                  <dd>Four-way junction control</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
           <div class="project-list">
-            <article class="project">
+            <article class="project project--shot">
               <div class="project-head">
                 <h3>JARVIS AI</h3>
                 <span class="tag">Personal project</span>
               </div>
               <div class="project-body">
-                <p>
-                  A system control assistant: an assistant that interacts with and controls system
-                  functions, built to explore how far basic AI and automation ideas go when they are
-                  pointed at a real machine.
-                </p>
-                <ul class="chips">
-                  <li><span class="chip">Artificial intelligence</span></li>
-                  <li><span class="chip">Automation</span></li>
-                </ul>
+                <div class="project-text">
+                  <p>
+                    A system control assistant: an assistant that interacts with and controls system
+                    functions, built to explore how far basic AI and automation ideas go when they
+                    are pointed at a real machine.
+                  </p>
+                  <ul class="chips">
+                    <li><span class="chip">Artificial intelligence</span></li>
+                    <li><span class="chip">Automation</span></li>
+                  </ul>
+                </div>
+                <figure class="shot">
+                  <img
+                    src="images/jarvis.jpg"
+                    srcset="images/jarvis-800.jpg 800w, images/jarvis.jpg 1600w"
+                    sizes="(max-width: 1200px) calc(100vw - 48px), 480px"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="The JARVIS assistant interface: system dials and a task list on the left, a glowing voice orb in the centre, and a communications log with a command input on the right."
+                  />
+                </figure>
               </div>
             </article>
 
@@ -771,6 +851,12 @@
         <a class="back-to-top" href="#home" aria-label="Back to top">
           <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
         </a>
+      </div>
+      <div class="wrap footer-credit">
+        <p>
+          The JARVIS interface shown in the work section comes from the open-source JARVIS project by
+          Fatihmakes.
+        </p>
       </div>
     </footer>
 

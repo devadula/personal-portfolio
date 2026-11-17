@@ -877,6 +877,82 @@ header .wrap {
   }
 }
 
+/* --- Project screens ------------------------------------------------------
+   Real screenshots, framed by the site's own rules: a hairline border, the
+   card radius, and a caption that says what the screen is. */
+.shot {
+  margin: 1.75rem 0 0;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--ink);
+}
+
+/* A project that carries its own screens: the panel runs the full width so
+   the screenshots keep their detail, and the spec becomes a strip below. */
+.work-feature--media {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.work-feature--media .work-feature-aside {
+  border-left: 0;
+  border-top: 1px solid var(--line);
+}
+
+.work-feature--media .spec {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 24px;
+}
+
+.work-feature--media .spec > div {
+  display: grid;
+  gap: 3px;
+  padding: 12px 0 14px;
+  border-top: 1px solid rgba(25, 25, 23, 0.12);
+}
+
+.work-feature--media .spec dt,
+.work-feature--media .spec dd {
+  padding: 0;
+  border-top: 0;
+}
+
+/* The assistant row carries its screen beside the copy. */
+.project--shot .project-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 0 40px;
+  align-items: start;
+}
+
+.project--shot .shot {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .project--shot .project-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .work-feature--media .spec {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .work-feature--media .spec {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Status tags and chips ---------------------------------------------- */
 .tag {
   display: inline-flex;
@@ -1250,6 +1326,19 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+}
+
+/* One credit line at the foot of the page, for the one screenshot that is
+   not entirely his own. */
+.footer-credit {
+  margin-top: 1.5rem;
+}
+
+.footer-credit p {
+  max-width: 72ch;
+  color: var(--ink-3);
+  font-size: 0.8125rem;
+  line-height: 1.5;
 }
 
 .footer-nav a {

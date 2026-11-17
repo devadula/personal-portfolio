@@ -63,26 +63,30 @@ or in a dark room.
   decorative shapes, no generic illustrations, no fake product screenshots, no gradients on text.
 - **Work leads.** The projects and the internship are the evidence; the interface stays quiet.
 - **Honest imagery.** Real photographs and real screenshots only. The site ships no fabricated
-  imagery, and generated visuals are never presented as the person's own work.
+  imagery, and generated visuals are never presented as the person's own work. A screenshot of
+  someone else's interface is credited to its author in the caption.
 - **The résumé is downloadable** and is the single source for credentials.
 
 ## Evidence on Hand
 
 - Résumé PDF: `Durgajanesh_Devadula_Resume.pdf` (authoritative for education, dates, percentage
   marks, internship, certification, and language skills).
-- Five named projects: JARVIS AI (system control assistant), Vehicle Detection, Disaster Detection
-  (in progress), College Small Business IT Incident Management (in progress), Mini Supermarket
-  (completed during the internship).
+- Six named projects: AI Smart Traffic Control (YOLO11 detection, ByteTrack tracking, quadrant
+  direction assignment, density scoring and a two-phase adaptive signal controller over a FastAPI
+  backend with a browser dashboard), JARVIS AI (system control assistant), Vehicle Detection,
+  Disaster Detection (in progress), College Small Business IT Incident Management (in progress),
+  Mini Supermarket (completed during the internship).
 - One internship: Web Development Intern, Rashmitha Information System, six months, completed.
 - Stack: C#, .NET, HTML, CSS, JavaScript, Bootstrap, SQL, React, Angular, Tailwind CSS, Node.js,
-  Python, FastAPI, PostgreSQL, foundational AI/ML and computer vision, MS Office.
+  Python, FastAPI, PostgreSQL, YOLO11 and ByteTrack, foundational AI/ML, MS Office.
 - Education: B.Tech AI & ML (in progress), Diploma CSE (2022–2025, 80%), ITI Wood Work Technician
   (NSQF, 2024), SSC (2021–2022, 75%) — all at Visakha Institute of Engineering and Technology,
   Narava / Sri Ramu Memorial ITI / Z.P.H. High School.
 - Languages: Telugu, English.
 - Certification: MS Office Certificate (HP); Certificate in data analytics with Python (NPTEL, 2025).
 - Contact: email, phone, Visakhapatnam (Andhra Pradesh, India), GitHub, LinkedIn.
-- No project screenshots, no client logos, no testimonials, no photographs of the person.
+- No client logos, no testimonials, no photographs of the person. The project screenshots in
+  `images/` are real captures of the owner's own builds.
 
 ## Product Principles
 
